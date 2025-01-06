@@ -4,16 +4,18 @@
 }
 
 .appHeader {
-  background-color: #53474F;
+  background-color: rgba(241, 248, 247, 0.6); /* 60% opacity */
   padding: 5px 30px 5px 30px;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 1rem;
 }
 
-.appLogo {
-  height: 100px;
+.hamburger {
+  height: 18px;
+
 }
 
 .appNav {
@@ -22,7 +24,7 @@
 }
 
 .appLink {
-  color: white;
+  color: rgb(12, 10, 10);
   text-decoration: none;
   font-size: 1.2em;
 }
@@ -33,14 +35,14 @@
 
 .main {
   padding: 20px;
-  background-color: #FFDCE8;
+  background-color: rgba(241, 248, 247, 0.6); /* 60% opacity */
   height: 100vh;
 }
 
 .footer {
   padding: 10px;
-  background-color: #53474F;
-  color: white;
+  background-color: rgba(241, 248, 247, 0.6); /* 60% opacity */
+  color: rgb(14, 12, 12);
   position: fixed;
   width: 100%;
   bottom: 0;
