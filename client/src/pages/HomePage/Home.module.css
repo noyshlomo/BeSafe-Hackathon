@@ -1,10 +1,35 @@
+
+
 .home {
   text-align: center;
   padding: 20px;
 }
 
 .headline {
-  font-size: 2em;
+  font-size: 1.5rem;
   margin-bottom: 20px;
-  color: #53474F;
+  color: #1E1E1E;
+  text-align: left; /* Align text to the left */
+  margin-left: 0;  /* Ensure it starts right at the edge */
+  padding-left: 0; /* Remove padding on the left if any */
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* or column */
+  gap: 3rem;
+}
+
+.myButton {
+  font-family: 'Comfortaa', cursive;
+  border: none; /* No border */
+  color: rgb(0, 0, 0); /* White text */
+  padding: 15px 32px; /* Top and bottom padding, left and right padding */
+  text-align: center; /* Center the text inside the button */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Allows setting dimensions */
+  font-size: 16px; /* Larger text size */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Soft, diffused shadow */
 }
