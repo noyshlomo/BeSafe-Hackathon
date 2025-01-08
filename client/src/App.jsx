@@ -5,7 +5,7 @@ import styles from './styles/App.module.css';
 //import projectLogo from './assets/project-logo.png'
 import hamburger from './assets/Hamburger.png';
 import InfluencerPage from './components/InfluencerPage/InfluencerPage';
-import SleepTrackingPage from './components/SleepTrackingPage/SleepTrackingPage';
+import SleepTrackingPage from './pages/SleepTrackingPage/SleepTrackingPage';
 
 function App() {
   return (
