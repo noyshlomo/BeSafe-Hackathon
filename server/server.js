@@ -3,8 +3,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import rubberDuckRoutes from './routes/rubberDucks.js'; // Import the routes
 import influencerRoutes from './routes/influencerRoutes.js';
+import sleepTrackingRoutes from './routes/sleepTrackingRoutes.js'; 
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,10 +22,8 @@ app.use(
   })
 );
 
-//Use the routes file for all `/ducks` routes
-app.use('/ducks', rubberDuckRoutes);
-
 app.use('/influencers', influencerRoutes);
+app.use('/sleep-tracking', sleepTrackingRoutes);
 
 // Start server
 const PORT = process.env.PORT;

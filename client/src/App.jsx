@@ -5,6 +5,7 @@ import styles from './styles/App.module.css';
 //import projectLogo from './assets/project-logo.png'
 import hamburger from './assets/Hamburger.png';
 import InfluencerPage from './components/InfluencerPage/InfluencerPage';
+import SleepTrackingPage from './pages/SleepTrackingPage/SleepTrackingPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/influencer/:id" element={<InfluencerPage />}></Route>
+            <Route path="/sleep-tracking/:id" element={<SleepTrackingPage />}></Route>
           </Routes>
         </main>
         <footer className={styles.footer}>
