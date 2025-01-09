@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/HomePage/HomePage';
 import styles from './styles/App.module.css';
 
@@ -6,6 +6,7 @@ import styles from './styles/App.module.css';
 import hamburger from './assets/Hamburger.png';
 import InfluencerPage from './components/InfluencerPage/InfluencerPage';
 import SleepTrackingPage from './pages/SleepTrackingPage/SleepTrackingPage';
+import SleepAnalytics from './pages/SleepAnalytics/SleepAnalytics';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/influencer/:id" element={<InfluencerPage />}></Route>
             <Route path="/sleep-tracking/:id" element={<SleepTrackingPage />}></Route>
+            <Route path="/sleep-analytics/:id" element={<SleepAnalytics />} />
           </Routes>
         </main>
         <footer className={styles.footer}>

@@ -1,9 +1,18 @@
 import { useParams } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import SleepTrackingForm from '../../components/SleepTrackingForm/SleepTrackingForm';
 import styles from './sleepTrackingPage.module.css';
 
 const SleepTrackingPage = () => {
     const { id } = useParams();
+
+    const navigate = useNavigate();  // Hook to get the navigate function
+
+    // Function to handle button click and navigate
+    const goToSleepAnalytics = () => {
+      navigate(`/sleep-analytics/${id}`);  
+    };
+
 
     return (
 <div>
@@ -14,7 +23,7 @@ const SleepTrackingPage = () => {
         <button
           className={styles['sleep-history-button']}
           aria-label="View Sleep History"
-          onClick={() => console.log('Go to Sleep History')}
+          onClick={goToSleepAnalytics}
         >
           Sleep History
         </button>
