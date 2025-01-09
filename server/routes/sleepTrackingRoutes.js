@@ -12,21 +12,25 @@ router.post('/sleep', (req, res) => {
     
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
-    
-    // Simulate adding a new ID
-    const newId = sleepHoursData.length ? sleepHoursData[sleepHoursData.length - 1].id + 1 : 1;
-    const newSleepDataWithId = { ...newSleepData, sleepId: newId };
 
-    // Add the new data to the array
+    // Simulate adding a new ID
+    // const lastId = sleepHoursData.length ? sleepHoursData[sleepHoursData.length - 1].id : 0;
+    // const newId = lastId + 1;
+    // const newSleepDataWithId = { ...newSleepData, sleepId: newId };
+    const lastId = sleepHoursData.length ? Math.max(0, ...sleepHoursData.map(item => item.sleepId || 0)) : 0;
+    console.log('Computed lastId:', lastId);
+
+    const newId = lastId + 1;
+    const newSleepDataWithId = { ...newSleepData, sleepId: newId };
+    console.log('New sleep data with ID:', newSleepDataWithId);
+
     sleepHoursData.push(newSleepDataWithId);
 
-    // Path to the file
     const sleepDataFilePath = path.join(__dirname, '../data/sleepHoursData.js');
 
     // Debug the updated data
     const updatedData = `const sleepHoursData = ${JSON.stringify(sleepHoursData, null, 2)};\n\nexport default sleepHoursData;`;
 
-    // Write to file
     fs.writeFile(sleepDataFilePath, updatedData, 'utf8', (err) => {
       if (err) {
         console.error('File Write Error:', err);
