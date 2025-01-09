@@ -14,22 +14,64 @@
   padding-left: 0; /* Remove padding on the left if any */
 }
 
+
 .container {
   display: flex;
   flex-direction: column; /* or column */
   gap: 3rem;
+  
 }
 
-.myButton {
+.sleepButton {
+  background-image: url('../../assets/SleepButton.jpg'); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the entire button */
+  background-position: center; /* Centers the image within the button */
   font-family: 'Comfortaa', cursive;
   border: none; /* No border */
-  color: rgb(0, 0, 0); /* White text */
+  color: rgb(255, 255, 255); /* White text */
   padding: 15px 32px; /* Top and bottom padding, left and right padding */
-  text-align: center; /* Center the text inside the button */
   text-decoration: none; /* No underline */
   display: inline-block; /* Allows setting dimensions */
-  font-size: 16px; /* Larger text size */
   cursor: pointer; /* Pointer cursor on hover */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Soft, diffused shadow */
+  height: 7rem;
+  text-align: left;
 }
+
+.inspirationButton {
+  background-image: url('../../assets/InspirationButton.jpg'); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the entire button */
+  background-position: center; /* Centers the image within the button */
+  font-family: 'Comfortaa', cursive;
+  border: none; /* No border */
+  color: #1E1E1E; /* White text */
+  padding: 15px 32px; /* Top and bottom padding, left and right padding */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Allows setting dimensions */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Soft, diffused shadow */
+  height: 7rem;
+  text-align: left;
+}
+
+.sleepButton .inspirationButton h2 {
+  font-size: 1.5rem; /* Title Font size */
+  font-weight: bold;
+  margin: 0; /* Reduces the bottom margin to 5px */
+}
+
+.sleepButton .inspirationButton p {
+  line-height: 20px; /* Set line height to 20px */
+  letter-spacing: 100%; /* Set letter spacing to 5% */
+  margin: 0;
+  font-size: 0.75rem; /* Adjust the paragraph text size */
+  line-height: 1.5; /* Adds spacing between lines */
+}
+
+
+
+
+
+
