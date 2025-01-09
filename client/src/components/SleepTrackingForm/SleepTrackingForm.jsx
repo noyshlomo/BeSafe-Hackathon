@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from 'prop-types';
-import styles from  './SleepTrackingForm.module.css';
+import styles from  './sleepTrackingForm.module.css';
 
 const SleepTrackingForm = ({ userId }) => {
   const [sleepTime, setSleepTime] = useState("");

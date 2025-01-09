@@ -1,6 +1,6 @@
 import { useParams } from 'react-router';
 import SleepTrackingForm from '../../components/SleepTrackingForm/SleepTrackingForm';
-import styles from './SleepTrackingPage.module.css';
+import styles from './sleepTrackingPage.module.css';
 
 const SleepTrackingPage = () => {
     const { id } = useParams();
