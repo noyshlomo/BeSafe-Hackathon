@@ -33,6 +33,20 @@ const sleepHoursData = [
     "wakeUpTime": "04:50",
     "date": "2025-01-09",
     "sleepId": 5
+  },
+  {
+    "userId": "2",
+    "sleepTime": "18:01",
+    "wakeUpTime": "17:02",
+    "date": "2025-01-09",
+    "sleepId": 6
+  },
+  {
+    "userId": "2",
+    "sleepTime": "12:31",
+    "wakeUpTime": "17:28",
+    "date": "2025-01-10",
+    "sleepId": 7
   }
 ];
 

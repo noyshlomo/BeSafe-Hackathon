@@ -17,7 +17,7 @@ const SleepTrackingForm = ({ userId }) => {
         date: today,
       };
 
-    fetch('http://localhost:5000/sleep-tracking/sleep', {
+    fetch('http://localhost:5000/sleep-tracking/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
