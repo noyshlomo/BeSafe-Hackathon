@@ -47,27 +47,6 @@ const sleepHoursData = [
     "wakeUpTime": "17:28",
     "date": "2025-01-10",
     "sleepId": 7
-  },
-  {
-    "userId": "2",
-    "sleepTime": "19:47",
-    "wakeUpTime": "17:53",
-    "date": "2025-01-10",
-    "sleepId": "7cc17903-fa2f-4a07-beb9-60c673c318b3"
-  },
-  {
-    "userId": "2",
-    "sleepTime": "15:17",
-    "wakeUpTime": "14:16",
-    "date": "2025-01-10",
-    "sleepId": "ef622d56-ccfb-4f89-82af-16277a84c5e7"
-  },
-  {
-    "userId": "2",
-    "sleepTime": "14:03",
-    "wakeUpTime": "14:50",
-    "date": "2025-01-10",
-    "sleepId": "5cb8b035-59bc-4b64-a0ae-5ae7dfe81b00"
   }
 ];
 

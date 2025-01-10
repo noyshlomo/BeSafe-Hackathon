@@ -12,6 +12,11 @@ const Home = () => {
     navigate(`/sleep-tracking/${userId}`);
   };
 
+  const handleInspirationNavigation = () => {
+    const userId = '2'; // Temp user ID
+    navigate(`/inspiration-dashboard/${userId}`);
+  };
+
   return (
     <div className={styles.home}>
       <h1 className={styles.headline}>Welcome back, Candy</h1>
@@ -21,7 +26,7 @@ const Home = () => {
           <h2>Sleep Tracking</h2>
           <p>Update ypur sleep log, get your sleep analytics and change your goals</p>
         </button>
-        <button type="button" className={styles.inspirationButton}>
+        <button type="button" className={styles.inspirationButton}  onClick={handleInspirationNavigation}>
           <h2>Inspiration Dashboard</h2>
           <p>Explore wellness topics and discover influencers.</p>
         </button>
