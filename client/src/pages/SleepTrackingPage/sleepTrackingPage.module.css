@@ -21,6 +21,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: 10px;
   margin-left: 10px;
+  font-family: 'Comfortaa', cursive;
 }
 
 .sleep-history-button:hover,
@@ -31,16 +32,21 @@
 }
 
 .sleep-history-button {
-  background-color: #dcd3f3;
-  color: #6c5ce7;
+  background-color: #C7A4EB;
+  color: #ffffff;
 }
 
 .set-sleep-goals-button {
-  background-color: #fde2c9;
-  color: #f39c12;
+  background-color:  #F09E54B2;
+  color: #ffffff;
 }
 
 .sleep-tips-button {
-  background-color: #d8e9fc;
-  color: #3498db;
+  background-image: url('../../assets/sleepTipsBackground.jpeg');
+  background-size: cover; /* Ensures the image covers the entire button */
+  background-position: center;
+  width: 315px;
+  height: 100px;
+  color: #535658;
+  text-align: left;
 }
