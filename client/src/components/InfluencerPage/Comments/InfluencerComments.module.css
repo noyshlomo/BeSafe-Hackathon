@@ -21,3 +21,11 @@
   font-size: 20px; /* Larger text size */
   text-align: left;
 }
+
+.button {
+  background-color: transparent; /* Removes background color */
+  border: none; /* Removes any border */
+  padding: 0; /* Removes padding to fit image size */
+  cursor: pointer; /* Changes cursor to pointer to indicate a clickable button */
+  display: inline-flex; /* Makes button fit the image size */
+}

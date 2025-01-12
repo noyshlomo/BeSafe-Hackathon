@@ -2,6 +2,7 @@ import styles from './InfluencerComments.module.css';
 import Comment from '../Comment/Comment';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import plusSvg from './../../../assets/plus.svg';
 
 const Comments = () => {
   const { id } = useParams();
@@ -33,7 +34,12 @@ const Comments = () => {
 
   return (
     <div className={styles.container}>
-      <div>Comments</div>
+      <div>
+        Comments{' '}
+        <button className={styles.button}>
+          <img src={plusSvg} alt="plus" />
+        </button>
+      </div>
       {comments.map((comment, index) => (
         <div key={index}>
           <Comment userName={comment.userName} content={comment.content} />
