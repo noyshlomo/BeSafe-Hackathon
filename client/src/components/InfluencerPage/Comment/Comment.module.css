@@ -1,0 +1,17 @@
+.commentcontainer {
+  padding: 10px;
+  margin-top: 10px;
+  border-bottom: 1px solid #a19e9e; /* Adds a bottom border between comments */
+  margin-bottom: 10px; /* Optional: adds some spacing between comments */
+}
+
+.username {
+  font-size: 18px;
+  margin-bottom: 5px; /* Adds space between the username and content */
+}
+
+.content {
+  font-weight: bold;
+  font-size: 18px; /* Adjust the font size of the comment */
+  color: #333; /* Set the text color for the comment */
+}

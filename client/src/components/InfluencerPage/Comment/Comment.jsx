@@ -1,8 +1,11 @@
+import styles from './Comment.module.css';
+
 // eslint-disable-next-line react/prop-types
-const Comment = ({ userName, text }) => {
+const Comment = ({ userName, content }) => {
   return (
-    <div>
-      userName is: {userName}, text is: {text}
+    <div className={styles.commentcontainer}>
+      <div className={styles.username}>{userName}</div>
+      <div className={styles.content}>{content}</div>
     </div>
   );
 };

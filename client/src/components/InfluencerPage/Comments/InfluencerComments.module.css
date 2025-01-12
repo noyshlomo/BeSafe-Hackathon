@@ -16,8 +16,8 @@
   display: flex;
   flex-direction: column; /* or column */
   background-color: rgba(199, 164, 235, 0.6);
-  padding: 20px;
-  border-radius: 10px; /* Rounded corners */
-  font-size: 16px; /* Larger text size */
+  padding: 40px;
+  border-radius: 50px; /* Rounded corners */
+  font-size: 20px; /* Larger text size */
   text-align: left;
 }

@@ -11,14 +11,12 @@ const Comments = () => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await fetch(
-          `http://localhost:5000/influencerComments/${id}`
-        );
+        const response = await fetch(`http://localhost:5000/influencers/${id}`);
         if (!response.ok) {
           return new Error('Failed to fetch comments');
         }
         const data = await response.json();
-        setComments(data);
+        setComments(data.comments);
       } catch (err) {
         console.log('Error fetching comments: ', err);
       } finally {
@@ -35,10 +33,10 @@ const Comments = () => {
 
   return (
     <div className={styles.container}>
-      <div>comments1</div>
+      <div>Comments</div>
       {comments.map((comment, index) => (
         <div key={index}>
-          <Comment userName={comment.userName} text={comment.text} />
+          <Comment userName={comment.userName} content={comment.content} />
         </div>
       ))}
     </div>
