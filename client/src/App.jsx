@@ -8,6 +8,7 @@ import InfluencerPage from './pages/InfluencerPage/InfluencerPage';
 import SleepTrackingPage from './pages/SleepTrackingPage/SleepTrackingPage';
 import SleepAnalytics from './pages/SleepAnalytics/SleepAnalytics';
 import InspirationDashboard from './pages/InspirationDashboard/InspirationDashboardPage';
+import SleepTipsPage from './pages/SleepTipsPage/SleepTipsPage';
 
 function App() {
   return (
@@ -28,6 +29,10 @@ function App() {
             <Route
               path="/sleep-tracking/:id"
               element={<SleepTrackingPage />}
+            ></Route>
+            <Route
+              path="/sleep-tracking/:id/tips"
+              element={<SleepTipsPage />}
             ></Route>
             <Route
               path="/inspiration-dashboard/:id"

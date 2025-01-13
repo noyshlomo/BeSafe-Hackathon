@@ -5,20 +5,23 @@ import SleepTip from '../../components/SleepTip/SleepTis';
 import styles from './sleepTrackingPage.module.css';
 
 const SleepTrackingPage = () => {
-    const { id } = useParams();
+    const { userId } = useParams();
 
     const navigate = useNavigate();  // Hook to get the navigate function
 
     // Function to handle button click and navigate
     const goToSleepAnalytics = () => {
-      navigate(`/sleep-analytics/${id}`);  
+      navigate(`/sleep-analytics/${userId}`);  
     };
 
+    const handleSleepTipsButtonClick = () => {
+      navigate("/sleep-tracking/${userId}/tips");
+    };
 
     return (
 <div>
       <h1>Sleep Tracking</h1>
-      <SleepTrackingForm userId={id} />
+      <SleepTrackingForm userId={userId} />
 
       <div className={styles['buttons-container']}>
         <button
@@ -38,12 +41,11 @@ const SleepTrackingPage = () => {
         <button
           className={styles['sleep-tips-button']}
           aria-label="View Tips for Sleep Hygiene"
-          onClick={() => console.log('Tips for Sleep Hygiene')}
+          onClick={handleSleepTipsButtonClick}
         >
           Tips for Sleep Hygiene
         </button>
       </div>
-      < SleepTip userId={id} />
     </div>
     );
 };
