@@ -1,6 +1,7 @@
 import { useParams } from 'react-router';
 import { useNavigate } from 'react-router-dom';
 import SleepTrackingForm from '../../components/SleepTrackingForm/SleepTrackingForm';
+import SleepTip from '../../components/SleepTip/SleepTis';
 import styles from './sleepTrackingPage.module.css';
 
 const SleepTrackingPage = () => {
@@ -42,6 +43,7 @@ const SleepTrackingPage = () => {
           Tips for Sleep Hygiene
         </button>
       </div>
+      < SleepTip userId={id} />
     </div>
     );
 };
