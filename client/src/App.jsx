@@ -4,7 +4,7 @@ import styles from './styles/App.module.css';
 
 //import projectLogo from './assets/project-logo.png'
 import hamburger from './assets/Hamburger.png';
-import InfluencerPage from './components/InfluencerPage/InfluencerPage';
+import InfluencerPage from './pages/InfluencerPage/InfluencerPage';
 import SleepTrackingPage from './pages/SleepTrackingPage/SleepTrackingPage';
 import SleepAnalytics from './pages/SleepAnalytics/SleepAnalytics';
 import InspirationDashboard from './pages/InspirationDashboard/InspirationDashboardPage';
@@ -25,8 +25,14 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/influencer/:id" element={<InfluencerPage />}></Route>
-            <Route path="/sleep-tracking/:id" element={<SleepTrackingPage />}></Route>
-            <Route path="/inspiration-dashboard/:id" element={<InspirationDashboard />}></Route>
+            <Route
+              path="/sleep-tracking/:id"
+              element={<SleepTrackingPage />}
+            ></Route>
+            <Route
+              path="/inspiration-dashboard/:id"
+              element={<InspirationDashboard />}
+            ></Route>
             <Route path="/sleep-analytics/:id" element={<SleepAnalytics />} />
           </Routes>
         </main>

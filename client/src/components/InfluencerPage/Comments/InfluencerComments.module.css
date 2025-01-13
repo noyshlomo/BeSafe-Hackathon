@@ -1,0 +1,31 @@
+.info {
+  text-align: center;
+  padding: 20px;
+}
+
+.headline {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #1e1e1e;
+  text-align: left; /* Align text to the left */
+  margin-left: 0; /* Ensure it starts right at the edge */
+  padding-left: 0; /* Remove padding on the left if any */
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* or column */
+  background-color: rgba(199, 164, 235, 0.6);
+  padding: 40px;
+  border-radius: 50px; /* Rounded corners */
+  font-size: 20px; /* Larger text size */
+  text-align: left;
+}
+
+.button {
+  background-color: transparent; /* Removes background color */
+  border: none; /* Removes any border */
+  padding: 0; /* Removes padding to fit image size */
+  cursor: pointer; /* Changes cursor to pointer to indicate a clickable button */
+  display: inline-flex; /* Makes button fit the image size */
+}
