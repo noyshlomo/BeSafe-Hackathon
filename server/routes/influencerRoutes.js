@@ -3,6 +3,6 @@ import getInfluencerById from '../controllers/influencerController.js';
 
 const router = express.Router();
 
-router.get('/:id', getInfluencerById);
+router.get('/:category/:id', getInfluencerById);
 
 export default router;

@@ -24,13 +24,16 @@ function App() {
         <main className={styles.main}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/influencer/:id" element={<InfluencerPage />}></Route>
+            <Route
+              path="/inspiration-boards/:category/:id"
+              element={<InfluencerPage />}
+            ></Route>
             <Route
               path="/sleep-tracking/:id"
               element={<SleepTrackingPage />}
             ></Route>
             <Route
-              path="/inspiration-dashboard/:id"
+              path="/inspiration-boards"
               element={<InspirationDashboard />}
             ></Route>
             <Route path="/sleep-analytics/:id" element={<SleepAnalytics />} />
