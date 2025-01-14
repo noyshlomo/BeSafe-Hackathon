@@ -8,6 +8,8 @@ import InfluencerPage from './pages/InfluencerPage/InfluencerPage';
 import SleepTrackingPage from './pages/SleepTrackingPage/SleepTrackingPage';
 import SleepAnalytics from './pages/SleepAnalytics/SleepAnalytics';
 import InspirationDashboard from './pages/InspirationDashboard/InspirationDashboardPage';
+import TopicScreen from './pages/TopicScreen/TopicScreen';
+import AddRecommendation from './pages/AddRecommendation/AddRecommendation';
 
 function App() {
   return (
@@ -36,7 +38,12 @@ function App() {
               path="/inspiration-boards"
               element={<InspirationDashboard />}
             ></Route>
+            <Route
+              path="/topic-screen/:topic"
+              element={<TopicScreen />} 
+            ></Route>
             <Route path="/sleep-analytics/:id" element={<SleepAnalytics />} />
+            <Route path="/add-recommendation/:topic" element={<AddRecommendation />} />
           </Routes>
         </main>
         <footer className={styles.footer}>
