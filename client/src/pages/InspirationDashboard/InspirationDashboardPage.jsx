@@ -2,9 +2,8 @@
 //import { useNavigate } from 'react-router-dom';
 import styles from './InspirationDashboard.module.css';
 
-
 const InspirationDashboard = () => {
-  console.log("enter insp function");
+  console.log('enter insp function');
 
   /*
   const navigate = useNavigate();
@@ -17,19 +16,19 @@ const InspirationDashboard = () => {
 
   return (
     <div className={styles.home}>
-      <h1 className={styles.headline}>Inspiration Dashboard</h1>
+      <h1 className={styles.headline}>Inspiration Boards</h1>
       <div className={styles.container}>
         <button type="button">
-          <h2>Toppic 1</h2>
+          <h2>Topic 1</h2>
         </button>
         <button type="button">
-          <h2>Toppic 2</h2>
+          <h2>Topic 2</h2>
         </button>
         <button type="button">
-          <h2>Toppic 3</h2>
+          <h2>Topic 3</h2>
         </button>
         <button type="button">
-          <h2>Toppic 4</h2>
+          <h2>Topic 4</h2>
         </button>
       </div>
     </div>

@@ -5,14 +5,16 @@ import { useParams } from 'react-router';
 import plusSvg from './../../../assets/plus.svg';
 
 const Comments = () => {
-  const { id } = useParams();
+  const { category, id } = useParams();
   const [comments, setComments] = useState();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/influencers/${id}`);
+        const response = await fetch(
+          `http://localhost:5000/inspiration-boards/${category}/${id}`
+        );
         if (!response.ok) {
           return new Error('Failed to fetch comments');
         }
@@ -25,7 +27,7 @@ const Comments = () => {
       }
     };
     fetchComments();
-  }, [id]);
+  }, [category, id]);
 
   if (loading) return <p>Loading...</p>;
   if (!comments || comments.length === 0) {

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import styles from './InfluencerInfo.module.css';
 
 const InfluencerInfo = () => {
-  const { id } = useParams(); // Get the influencer ID from the route
+  const { category, id } = useParams(); // Get the influencer ID from the route
   const [influencer, setInfluencer] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,7 +12,9 @@ const InfluencerInfo = () => {
     // Fetch influencer data from the server
     const fetchInfluencer = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/influencers/${id}`);
+        const response = await fetch(
+          `http://localhost:5000/inspiration-boards/${category}/${id}`
+        );
         if (!response.ok) {
           throw new Error('Failed to fetch influencer data');
         }
@@ -26,7 +28,7 @@ const InfluencerInfo = () => {
     };
 
     fetchInfluencer();
-  }, [id]);
+  }, [category, id]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
