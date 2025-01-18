@@ -44,9 +44,10 @@ const InfluencerForm = () => {
     }
     return (
         <div>
-            <form className={styles.container} onSubmit={handelSubmit}>
-                <label htmlFor="Topic">Topic</label>
+            <form className={styles.influencerFormContainer} onSubmit={handelSubmit}>
+                <label className={styles.influencerFormLabel} htmlFor="Topic">Topic</label>
                 <select 
+                    className={styles.influencerFormSelect}
                     id="topic" 
                     name="topic" 
                     required 
@@ -63,8 +64,9 @@ const InfluencerForm = () => {
                     ))}
                 </select>
 
-                <label htmlFor="name">Influencer&apos;s Name</label>
+                <label className={styles.influencerFormLabel} htmlFor="name">Influencer&apos;s Name</label>
                 <input 
+                    className={styles.influencerFormInput}
                     type="text" 
                     id="name" 
                     required 
@@ -73,8 +75,9 @@ const InfluencerForm = () => {
                     onChange={(e) => setName(e.target.value)}
                 />
 
-                <label htmlFor="instagram">Instagram URL</label>
+                <label className={styles.influencerFormLabel} htmlFor="instagram">Instagram URL</label>
                 <input 
+                    className={styles.influencerFormInput}
                     type="url" 
                     id="instagram" 
                     placeholder="Enter Instagram URL"
@@ -82,8 +85,9 @@ const InfluencerForm = () => {
                     onChange={(e) => setInstagram(e.target.value)}
                 />
 
-                <label htmlFor="tiktok">Tiktok URL</label>
+                <label className={styles.influencerFormLabel} htmlFor="tiktok">Tiktok URL</label>
                 <input 
+                    className={styles.influencerFormInput}
                     type="url" 
                     id="tiktok" 
                     placeholder="Enter Tiktok URL"
@@ -91,8 +95,9 @@ const InfluencerForm = () => {
                     onChange={(e) => setTiktok(e.target.value)}
                 />
 
-                <label htmlFor="facebook">Facebook URL</label>
+                <label className={styles.influencerFormLabel} htmlFor="facebook">Facebook URL</label>
                 <input 
+                    className={styles.influencerFormInput}
                     type="url" 
                     id="facebook" 
                     placeholder="Enter Facebook URL"
@@ -100,7 +105,7 @@ const InfluencerForm = () => {
                     onChange={(e) => setFacebook(e.target.value)}
                 />
 
-                <button type="submit">Add</button>
+                <button className={styles.influencerFormButton} type="submit">Add</button>
             </form>
         </div>
     );

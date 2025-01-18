@@ -1,18 +1,17 @@
-/* InfluencerForm.module.css */
-.container {
+.influencerFormContainer {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
 }
 
-label {
+.influencerFormLabel {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-select,
-input {
+.influencerFormInput,
+.influencerFormSelect {
   width: 100%;
   padding: 10px;
   margin-bottom: 12px;
@@ -21,11 +20,11 @@ input {
   box-sizing: border-box;
 }
 
-input::placeholder {
+.influencerFormInput::placeholder {
   color: #aaa;
 }
 
-button {
+.influencerFormButton {
   background-color: #DAE9E6;
   color: #333;
   padding: 10px 20px;
@@ -35,6 +34,6 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.influencerFormButton:hover {
   background-color: #cbe0dc;
 }
