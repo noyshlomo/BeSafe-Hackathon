@@ -1,6 +1,5 @@
-import React from "react";
 import { useParams } from "react-router-dom";
-import SleepTip from '../../components/SleepTip/SleepTis';
+import SleepTip from '../../components/SleepTip/SleepTips';
 
 const SleepTips = () => {
     const { userId } = useParams();

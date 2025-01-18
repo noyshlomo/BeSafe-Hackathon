@@ -1,27 +1,26 @@
 import { useParams } from 'react-router';
 import { useNavigate } from 'react-router-dom';
 import SleepTrackingForm from '../../components/SleepTrackingForm/SleepTrackingForm';
-import SleepTip from '../../components/SleepTip/SleepTis';
 import styles from './sleepTrackingPage.module.css';
 
 const SleepTrackingPage = () => {
-    const { userId } = useParams();
+    const { id } = useParams();
 
     const navigate = useNavigate();  // Hook to get the navigate function
 
     // Function to handle button click and navigate
     const goToSleepAnalytics = () => {
-      navigate(`/sleep-analytics/${userId}`);  
+      navigate(`/sleep-analytics/${id}`);  
     };
 
     const handleSleepTipsButtonClick = () => {
-      navigate("/sleep-tracking/${userId}/tips");
+      navigate(`/sleep-tips/${id}`);
     };
 
     return (
 <div>
       <h1>Sleep Tracking</h1>
-      <SleepTrackingForm userId={userId} />
+      <SleepTrackingForm userId={id} />
 
       <div className={styles['buttons-container']}>
         <button

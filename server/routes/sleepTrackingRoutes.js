@@ -10,6 +10,6 @@ router.get('/:id', getSleepData);
 
 router.delete('/:userId/:sleepId', deleteSleepData);
 
-router.post('/sleep-tip', getSleepTip);
+router.post('/sleep-tip/:id', getSleepTip);
 
 export default router; 

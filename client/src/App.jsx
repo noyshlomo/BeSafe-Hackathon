@@ -31,7 +31,7 @@ function App() {
               element={<SleepTrackingPage />}
             ></Route>
             <Route
-              path="/sleep-tracking/:id/tips"
+              path="/sleep-tips/:id"
               element={<SleepTipsPage />}
             ></Route>
             <Route

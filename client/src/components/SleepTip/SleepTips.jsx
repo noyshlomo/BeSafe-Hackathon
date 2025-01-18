@@ -70,7 +70,8 @@ const SleepTip = ({ userId }) => {
                 return;
             }
 
-            const endpoint = 'http://localhost:5000/sleep-tracking/sleep-tip';
+            const endpoint = `http://localhost:5000/sleep-tracking/sleep-tip/${userId}`;
+
             if (isDetailed) setAnalysisLoading(true);
             
             const response = await fetch(endpoint, {
