@@ -1,8 +1,9 @@
 import express from 'express';
-import getInfluencerById from '../controllers/influencerController.js';
+import {getInfluencerById, addInfluencer } from '../controllers/influencerController.js';
 
 const router = express.Router();
 
 router.get('/:category/:id', getInfluencerById);
+router.post('/', addInfluencer);
 
 export default router;

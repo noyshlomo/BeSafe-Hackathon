@@ -1,0 +1,39 @@
+.influencerFormContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.influencerFormLabel {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.influencerFormInput,
+.influencerFormSelect {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.influencerFormInput::placeholder {
+  color: #aaa;
+}
+
+.influencerFormButton {
+  background-color: #DAE9E6;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.influencerFormButton:hover {
+  background-color: #cbe0dc;
+}
