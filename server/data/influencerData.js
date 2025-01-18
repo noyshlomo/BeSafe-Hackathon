@@ -22,6 +22,14 @@ const influencers = [
     "tiktok": "",
     "facebook": "",
     "influencerId": "6bc8adc6-fa0b-442c-8c5b-d619dd8e8dc4"
+  },
+  {
+    "category": "Mental Health",
+    "name": "Noa",
+    "instagram": "https://www.instagram.com/meitalshapiro",
+    "tiktok": "",
+    "facebook": "",
+    "influencerId": "67bfbff4-ca67-44f5-abdd-9b9079cb441c"
   }
 ];
 
