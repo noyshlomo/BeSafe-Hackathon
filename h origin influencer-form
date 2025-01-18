@@ -1,0 +1,134 @@
+* [33m5cd13f7[m[33m ([m[1;36mHEAD -> [m[1;32minfluencer-form[m[33m)[m Add check for duplicates before adding influencer, check by url
+* [33m69bc054[m Add style to influencer form
+* [33m3198f2c[m Add influencer form service - route, controller
+* [33m026d3bd[m Fix influencer form client side - select topic from data, 3 urls options..
+* [33m30bd8ac[m[33m ([m[1;31morigin/add-influencer-feature[m[33m)[m added topic screen and add recommendation form with no backend working
+*   [33m8166a09[m[33m ([m[1;31morigin/main[m[33m)[m Merge pull request #11 from noyshlomo/influencer-info
+[32m|[m[33m\[m  
+[32m|[m * [33ma7c0e77[m Update navigation to use /inspiration-boards route instead of /inspiration-dashboard
+[32m|[m * [33m80c9148[m Change routes to include category in influencer path: /inspiration-boards/{category}/{influencerId}
+[32m|[m [33m|[m * [33mda41fa8[m[33m ([m[1;32msleep-tips[m[33m)[m Fix sleep tip ai routes
+[32m|[m [33m|[m * [33m056a92f[m Add sleep tips page and moved sleep tip text to this page
+[32m|[m [33m|[m *   [33m5c9b1e2[m Merge branch 'main' of https://github.com/noyshlomo/BeSafe-Hackathon into sleep-tips
+[32m|[m [33m|[m [35m|[m[32m\[m  
+[32m|[m [33m|[m[32m_[m[35m|[m[32m/[m  
+[32m|[m[32m/[m[33m|[m [35m|[m   
+* [33m|[m [35m|[m [33m346c3f6[m Merge pull request #10 from noyshlomo/influencer-info
+[1;31m|[m[33m\[m[33m|[m [35m|[m 
+[1;31m|[m * [35m|[m [33maf232e4[m Add plus SVG icon for add comment button (button not functional yet)
+[1;31m|[m * [35m|[m [33m530165b[m Add function to fetch comments by influencer ID in backend controller
+[1;31m|[m * [35m|[m   [33m4a9751f[m Merge branch 'main' of https://github.com/noyshlomo/BeSafe-Hackathon into influencer-info
+[1;31m|[m [1;33m|[m[1;31m\[m [35m\[m  
+[1;31m|[m [1;33m|[m[1;31m/[m [35m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m [35m|[m   
+[1;31m|[m * [35m|[m [33mc860d68[m Add Comments component and reorganize InfluencerPage components folder
+[1;31m|[m [1;34m|[m * [33mbc7f3af[m Add sleep tip by AI
+[1;31m|[m [1;34m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[1;34m|[m   
+* [1;34m|[m   [33ma2f71b9[m Merge pull request #9 from noyshlomo/add-delete-button
+[1;35m|[m[1;36m\[m [1;34m\[m  
+[1;35m|[m * [1;34m|[m [33ma24b4a8[m added delete option for sleep log and inspiration page
+[1;35m|[m[1;35m/[m [1;34m/[m  
+* [1;34m|[m   [33m0466283[m Merge pull request #8 from noyshlomo/sleep-tracking-service
+[31m|[m[32m\[m [1;34m\[m  
+[31m|[m * [1;34m|[m [33m3a20147[m[33m ([m[1;31morigin/sleep-tracking-service[m[33m, [m[1;32msleep-tracking-service[m[33m)[m Add UUID library and fix styling for sleep tracking page
+* [32m|[m [1;34m|[m [33m4b2d67c[m Merge pull request #7 from noyshlomo/sleep-tracking-service
+[33m|[m[32m\[m[32m|[m [1;34m|[m 
+[33m|[m * [1;34m|[m [33ma7953f2[m implement sleep tracking router and controller
+[33m|[m[33m/[m [1;34m/[m  
+* [1;34m|[m   [33m70b70a4[m Merge pull request #6 from noyshlomo/sleep-statistics
+[35m|[m[36m\[m [1;34m\[m  
+[35m|[m * [1;34m|[m [33me060b9e[m Front added to home page
+* [36m|[m [1;34m|[m [33m03c8d9d[m[33m ([m[1;32msleep-tracking-style[m[33m)[m Merge pull request #5 from noyshlomo/sleep-statistics
+[1;34m|[m[36m\[m[36m|[m [1;34m|[m 
+[1;34m|[m [36m|[m[1;34m/[m  
+[1;34m|[m[1;34m/[m[36m|[m   
+[1;34m|[m * [33m0ae1dd8[m sleep statistics page added
+[1;34m|[m[1;34m/[m  
+*   [33m329c4f7[m Merge pull request #4 from noyshlomo/sleep-tracking-form
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * [33mfc2f014[m[33m ([m[1;31morigin/sleep-tracking-form[m[33m, [m[1;32msleep-tracking-form[m[33m)[m Update dependencies in package.json and package-lock.json
+* [1;34m|[m [33mef1bab5[m Merge pull request #3 from noyshlomo/sleep-tracking-form
+[1;35m|[m[1;34m\[m[1;34m|[m 
+[1;35m|[m * [33m82ac760[m add sleep data file
+[1;35m|[m * [33m0c278b0[m Fixed issue where unique IDs were not correctly assigned to new sleep tracking entries
+* [1;36m|[m [33m42bad71[m Merge pull request #2 from noyshlomo/sleep-tracking-form
+[31m|[m[1;36m\[m[1;36m|[m 
+[31m|[m * [33m4317939[m fix css file name import
+[31m|[m * [33m6816d32[m fix file name
+[31m|[m * [33m03876d1[m Move SleepTracking components and styles to new folder
+[31m|[m * [33m7ffdc44[m Add sleep tracking routes to server for handling sleep data
+[31m|[m * [33mbcbf080[m Integrate SleepTracking feature into App.js
+[31m|[m * [33mf7a02f4[m Add userData.js file
+[31m|[m * [33m21f6c8f[m Refactor folder structure for improved organization
+[31m|[m * [33m71923dd[m Add sleep hours  data file
+[31m|[m * [33m23a620f[m Add SleepTrackingPage to server.js and app.js
+[31m|[m * [33mb0a714d[m Add SleepTrackingPage and SleepTrackingForm components with styles
+[31m|[m[31m/[m  
+*   [33mf7bd523[m[33m ([m[1;32mmain[m[33m)[m Merge pull request #1 from noyshlomo/influencer-info
+[33m|[m[34m\[m  
+[33m|[m * [33m2dd5325[m[33m ([m[1;31morigin/influencer-info[m[33m)[m Add influencer information page
+[33m|[m * [33md23669e[m[33m ([m[1;31morigin/new-yardens-branch[m[33m)[m home page
+[33m|[m[33m/[m  
+*   [33m89636c0[m Merge pull request #6 from yuvalha96/feature/pr-validation
+[35m|[m[36m\[m  
+[35m|[m * [33m56f44b3[m PR Validation
+[35m|[m[35m/[m  
+* [33m10056b6[m upgrade vite fixes esbuild issue
+* [33m11d8bcb[m README.md - improve Project Structure section
+* [33m5ec2a3a[m Update README.md
+*   [33m668d861[m server - convert to ESM + eslint + package upgrades
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33mdd8a276[m server eslint fixes
+[1;31m|[m * [33m4d4b616[m update client eslint config
+[1;31m|[m * [33m835578e[m client esbuild fix
+[1;31m|[m * [33mcb67be7[m client package upgrades
+[1;31m|[m * [33m67da825[m server eslint
+[1;31m|[m * [33m40b1c28[m remove unneeded server package properties
+[1;31m|[m * [33m0ffc984[m convert server to ESM
+[1;31m|[m * [33meb42421[m upgrade server versions
+[1;31m|[m * [33mfebf9b1[m normalize versions
+[1;31m|[m[1;31m/[m  
+* [33m1ff9b70[m Update README.md
+*   [33m07ca7e7[m Merge pull request #4 from yuvalha96/feature/vite
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * [33m290bebb[m documentation improvements
+[1;33m|[m * [33m933a5fe[m enforce eslint
+[1;33m|[m * [33m1e27c9e[m migrate to Vite
+[1;33m|[m[1;33m/[m  
+*   [33m0819080[m Merge pull request #3 from yuvalha96/ohads/fixes
+[1;35m|[m[1;36m\[m  
+[1;35m|[m * [33mf5b52db[m upgrade client packages
+[1;35m|[m * [33m4fcfa67[m fix client example env file
+[1;35m|[m * [33maf49c9a[m fix npm typescript conflict
+[1;35m|[m * [33m7a82c73[m improve README
+[1;35m|[m[1;35m/[m  
+* [33mecdd49a[m Update README.md
+* [33mab10e58[m Update README.md
+*   [33m0b3b635[m Merge pull request #2 from yuvalha96/fix-typescript
+[31m|[m[32m\[m  
+[31m|[m * [33m8efe0be[m fix typescript
+[31m|[m[31m/[m  
+*   [33m9c2cd1e[m Merge pull request #1 from yuvalha96/removing-mongo
+[33m|[m[34m\[m  
+[33m|[m * [33me0f2613[m cleanup
+[33m|[m * [33mda327e5[m working changes
+[33m|[m * [33m9860359[m removing mongo
+[33m|[m * [33m35c443b[m removing mongo
+[33m|[m[33m/[m  
+* [33m964e4f6[m Update README.md
+* [33m9f3480d[m fix env example files
+* [33mcabdf29[m Update README.md
+* [33m47ebf8f[m update package-lock
+* [33m1045f80[m update package-lock
+* [33mddc3734[m update button text
+* [33mbfbdcb6[m Update README.md
+* [33m146ab08[m add full flow
+* [33me1e57bd[m Update README.md
+* [33mf585479[m Update README.md
+* [33medc4b11[m Update README.md
+* [33m22ab473[m Update README.md
+* [33m32de2cd[m Update README.md
+* [33ma3e7af6[m Update README.md
+* [33m0b4b646[m added client and server
+* [33mc79fb09[m Initial commit

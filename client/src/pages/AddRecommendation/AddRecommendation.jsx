@@ -1,4 +1,3 @@
-import { useParams } from 'react-router';
 import styles from "./AddRecommendation"
 import InfluencerForm from '../../components/InfluencerForm/InfluencerForm';
 
