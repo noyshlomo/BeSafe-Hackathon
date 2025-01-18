@@ -43,7 +43,7 @@ function App() {
               element={<TopicScreen />} 
             ></Route>
             <Route path="/sleep-analytics/:id" element={<SleepAnalytics />} />
-            <Route path="/add-recommendation/:topic" element={<AddRecommendation />} />
+            <Route path="/add-recommendation" element={<AddRecommendation />} />
           </Routes>
         </main>
         <footer className={styles.footer}>

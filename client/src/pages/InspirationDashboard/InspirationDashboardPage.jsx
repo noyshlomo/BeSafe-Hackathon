@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';  // Ensure this is uncommented
+import { useNavigate } from 'react-router-dom';
 import styles from './InspirationDashboard.module.css';
 
 const InspirationDashboard = () => {
@@ -7,6 +7,10 @@ const InspirationDashboard = () => {
   // This function takes a topic name and navigates to the corresponding screen
   const handleNavigation = (topic) => {
     navigate(`/topic-screen/${topic}`);
+  };
+
+  const handleAddRecommendation = () => {
+    navigate('/add-recommendation');
   };
 
   return (
@@ -26,6 +30,9 @@ const InspirationDashboard = () => {
           <h2> Mental Health</h2>
         </button>
       </div>
+      <button type="button" onClick={handleAddRecommendation}>
+          Add Recommendation
+      </button>
     </div>
   );
 };
