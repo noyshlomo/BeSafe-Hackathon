@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PropTypes from 'prop-types';
+import styles from './SleepTips.module.css';
 
 const SleepTip = ({ userId }) => {
     const [quickTip, setQuickTip] = useState("");
@@ -83,35 +84,35 @@ const SleepTip = ({ userId }) => {
     };
 
     return (
-        <div className="sleep-tip-container">
-            <div className="tip-card">
+        <div className={styles.sleepTipContainer}>
+            <div className={styles.tipCard}>
                 <h2>Daily Sleep Tip</h2>
-                <div className="tip-content">
+                <div className={styles.tipContent}>
                     {loading ? (
-                        <p className="loading-text">Loading your sleep tip...</p>
+                        <p className={styles.loadingText}>Loading your sleep tip...</p>
                     ) : (
                         <>
-                            <p className="tip-text">{quickTip}</p>
-                            <p className="tip-date">Updated: {lastUpdateDate}</p>
+                            <p className={styles.tipText}>{quickTip}</p>
+                            <p className={styles.tipDate}>Updated: {lastUpdateDate}</p>
                         </>
                     )}
                 </div>
             </div>
 
-            <div className="analysis-section">
+            <div className={styles.analysisSection}>
                 <button 
                     onClick={handleDetailedAnalysis}
                     disabled={analysisLoading}
-                    className="analysis-button"
+                    className={styles.analysisButton}
                 >
                     {analysisLoading ? "Generating Analysis..." : "Get Detailed Sleep Analysis"}
                 </button>
 
                 {detailedAnalysis && (
-                    <div className="tip-card">
+                    <div className={styles.tipCard}>
                         <h2>Detailed Sleep Analysis</h2>
-                        <div className="tip-content">
-                            <div className="analysis-text">
+                        <div className={styles.tipContent}>
+                            <div className={styles.analysisText}>
                                 {detailedAnalysis}
                             </div>
                         </div>
