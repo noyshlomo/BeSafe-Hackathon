@@ -1,4 +1,3 @@
-/* General Form Styles */
 .sleep-tracking-form {
   display: flex;
   flex-direction: column;
@@ -52,4 +51,3 @@
 .sleep-tracking-form-submit:active {
   background-color: #CCE6E2;
 }
-
