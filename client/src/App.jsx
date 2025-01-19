@@ -39,7 +39,7 @@ function App() {
               element={<InspirationDashboard />}
             ></Route>
             <Route
-              path="/topic-screen/:topic"
+              path="/inspiration-boards/:category"
               element={<TopicScreen />} 
             ></Route>
             <Route path="/sleep-analytics/:id" element={<SleepAnalytics />} />
