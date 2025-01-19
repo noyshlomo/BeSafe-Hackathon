@@ -29,59 +29,80 @@ const checkDuplicateUrl = (url, fieldName) => {
       (inf) => inf[fieldName] === url
     );
     if (existingInfluencer) {
-      return "This reccomandation already exists";
+      return 'This recomendation already exists';
     }
   }
   return null;
 };
 
-const addInfluencer  = (req, res) => {
+const addInfluencer = (req, res) => {
   const newInfluencerData = req.body;
 
-    try {
-      const instagramCheck = checkDuplicateUrl(newInfluencerData.instagram, 'instagram');
-      const tiktokCheck = checkDuplicateUrl(newInfluencerData.tiktok, 'tiktok');
-      const facebookCheck = checkDuplicateUrl(newInfluencerData.facebook, 'facebook');
+  try {
+    const instagramCheck = checkDuplicateUrl(
+      newInfluencerData.instagram,
+      'instagram'
+    );
+    const tiktokCheck = checkDuplicateUrl(newInfluencerData.tiktok, 'tiktok');
+    const facebookCheck = checkDuplicateUrl(
+      newInfluencerData.facebook,
+      'facebook'
+    );
 
-      if (instagramCheck || tiktokCheck || facebookCheck) {
-        return res.status(400).json({ message: "This influencer has already been recommended." });
-      }
-      
-      const __filename = fileURLToPath(import.meta.url);
-      const __dirname = path.dirname(__filename);
-      const influencerDataFilePath = path.join(__dirname, '../data/influencerData.js');
+    if (instagramCheck || tiktokCheck || facebookCheck) {
+      return res
+        .status(400)
+        .json({ message: 'This influencer has already been recommended.' });
+    }
 
-      const newInfluencerDataWithId = { ...newInfluencerData, influencerId: uuidv4() };
-      console.log('New influencer data with ID:', newInfluencerDataWithId);
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
+    const influencerDataFilePath = path.join(
+      __dirname,
+      '../data/influencerData.js'
+    );
 
-      influencers.push(newInfluencerDataWithId);
+    const newInfluencerDataWithId = {
+      ...newInfluencerData,
+      influencerId: uuidv4(),
+    };
+    console.log('New influencer data with ID:', newInfluencerDataWithId);
 
-      // Debug the updated data
-      const updatedData = `const influencers = ${JSON.stringify(influencers, null, 2)};\n\nexport default influencers;`;
+    influencers.push(newInfluencerDataWithId);
 
-      fs.writeFile(influencerDataFilePath, updatedData, 'utf8', (err) => {
+    // Debug the updated data
+    const updatedData = `const influencers = ${JSON.stringify(
+      influencers,
+      null,
+      2
+    )};\n\nexport default influencers;`;
+
+    fs.writeFile(influencerDataFilePath, updatedData, 'utf8', (err) => {
       if (err) {
-          console.error('File Write Error:', err);
-          return res.status(500).send('Error saving influencer data');
+        console.error('File Write Error:', err);
+        return res.status(500).send('Error saving influencer data');
       }
       res.status(200).send('Influencer data saved successfully');
-      });
-    } catch (error) {
-      console.error('Unexpected Error:', error);
-      res.status(500).send('Error saving influencer data');
-    }
-}
+    });
+  } catch (error) {
+    console.error('Unexpected Error:', error);
+    res.status(500).send('Error saving influencer data');
+  }
+};
 
 const getInfluencersByTopic = (req, res) => {
   const { category } = req.params;
   // Simulate finding data based on category
-  console.log("Fetching influencers for category:", req.params.category);
-  const foundInfluencers = influencers.filter(inf => inf.category === category);
+  console.log('Fetching influencers for category:', req.params.category);
+  const foundInfluencers = influencers.filter(
+    (inf) => inf.category === category
+  );
   if (foundInfluencers.length === 0) {
-      return res.status(404).json({ error: 'No influencers found for this category' });
+    return res
+      .status(404)
+      .json({ error: 'No influencers found for this category' });
   }
   res.json(foundInfluencers);
 };
-
 
 export { getInfluencerById, addInfluencer, getInfluencersByTopic };
