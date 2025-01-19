@@ -72,12 +72,13 @@ const SleepDataTable = ({ id }) => {
               <td className={styles.td}>{item.sleepTime}</td>
               <td className={styles.td}>{item.wakeUpTime}</td>
               <td className={styles.td}>{totalHours} hours</td>
-              <button
+              <td className={styles.td}>
+                <button
                   className={styles.deleteButton}
                   onClick={() => handleDelete(item.sleepId)}
                 >
                  🗑️
-                </button> 
+                </button> </td>
             </tr>
           );
         })}
