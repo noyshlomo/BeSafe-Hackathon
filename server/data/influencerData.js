@@ -16,6 +16,7 @@ const influencers = [
     tiktok: '',
   },
   {
+    id: 3,
     category: 'nutrition',
     name: 'Noa',
     instagram: 'https://www.instagram.com/meitalshapiro',
@@ -24,6 +25,7 @@ const influencers = [
     influencerId: '6bc8adc6-fa0b-442c-8c5b-d619dd8e8dc4',
   },
   {
+    id: 4,
     category: 'sexuality-and-health',
     name: 'health',
     instagram: 'https://www.instagram.com/meitalshapiro',
@@ -32,6 +34,7 @@ const influencers = [
     influencerId: '67bfbff4-ca67-44f5-abdd-9b9079cb441c',
   },
   {
+    id: 5,
     category: 'body-image-and-self-esteem',
     name: 'body-image',
     instagram: 'https://www.instagram.com/noam',

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 //import styles from './TopicScreen.module.css';
 
 const TopicScreen = () => {
@@ -7,6 +7,7 @@ const TopicScreen = () => {
   const [influencers, setInfluencers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Fetch influencers based on the category
@@ -41,17 +42,22 @@ const TopicScreen = () => {
     fetchInfluencers();
   }, [category]);
 
+  const handleInfluencerClick = (id) => {
+    navigate(`/inspiration-boards/${category}/${id}`); // Navigate to influencer detail page
+  };
+
   return (
     <div>
       <h1>{category} board</h1>
       {loading && <p>Loading...</p>}
-      {console.log('loading: ' + loading)}
-      {console.log('error: ' + error)}
-      {console.log('influencers.length: ' + influencers.length)}
       {!loading && !error && influencers.length > 0 && (
         <div>
           {influencers.map((influencer, index) => (
-            <button key={index} type="button">
+            <button
+              key={index}
+              type="button"
+              onClick={() => handleInfluencerClick(influencer.id)}
+            >
               <h2>{influencer.name}</h2>
             </button>
           ))}
