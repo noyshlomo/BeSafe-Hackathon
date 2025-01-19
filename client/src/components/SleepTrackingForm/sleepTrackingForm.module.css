@@ -5,6 +5,7 @@
   align-items: center;
   width: 100%;
   max-width: 500px;
+  margin: 0 auto;
 }
 
 .sleep-tracking-form-group {
@@ -51,3 +52,4 @@
 .sleep-tracking-form-submit:active {
   background-color: #CCE6E2;
 }
+
