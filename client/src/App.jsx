@@ -22,6 +22,7 @@ function App() {
             <Link to="/" className={styles.appLink}>
               Home
             </Link>
+            <button className={styles.goBackButton} onClick={() => window.history.back()}>Go Back</button>
           </nav>
         </header>
         <main className={styles.main}>
