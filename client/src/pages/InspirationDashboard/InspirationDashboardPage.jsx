@@ -6,7 +6,7 @@ const InspirationDashboard = () => {
 
   // This function takes a topic name and navigates to the corresponding screen
   const handleNavigation = (topic) => {
-    navigate(`/topic-screen/${topic}`);
+    navigate(`/inspiration-boards/${topic}`);
   };
 
   const handleAddRecommendation = () => {
@@ -15,24 +15,26 @@ const InspirationDashboard = () => {
 
   return (
     <div className={styles.home}>
-      <h1 className={styles.headline}>Inspiration Boards</h1>
+      <div className={styles.topContainer}>
+        <h1 className={styles.headline}>Inspiration Boards</h1>
+        <button className={styles.addRecommendation} type="button" onClick={handleAddRecommendation}>
+          Add Recommendation
+        </button>
+      </div>
       <div className={styles.container}>
-        <button type="button" onClick={() => handleNavigation('nutrition')}>
+        <button className={styles.nutrition} type="button" onClick={() => handleNavigation('nutrition')}>
           <h2>Nutrition</h2>
         </button>
-        <button type="button" onClick={() => handleNavigation('body-image-and-self-esteem')}>
+        <button className={styles.bodyImage} type="button" onClick={() => handleNavigation('body-image-and-self-esteem')}>
           <h2>Body Image & Self-Esteem</h2>
         </button>
-        <button type="button" onClick={() => handleNavigation('sexuality-and-health')}>
+        <button className={styles.sexualityAndHealth} type="button" onClick={() => handleNavigation('sexuality-and-health')}>
           <h2>Sexuality & Health</h2>
         </button>
-        <button type="button" onClick={() => handleNavigation('mental-health')}>
+        <button className={styles.mentalHealth} type="button" onClick={() => handleNavigation('mental-health')}>
           <h2> Mental Health</h2>
         </button>
       </div>
-      <button type="button" onClick={handleAddRecommendation}>
-          Add Recommendation
-      </button>
     </div>
   );
 };

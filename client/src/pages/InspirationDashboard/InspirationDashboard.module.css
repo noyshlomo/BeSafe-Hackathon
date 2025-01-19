@@ -18,9 +18,67 @@
 .container {
   display: flex;
   flex-direction: column; /* or column */
-  gap: 3rem;
-  
+  gap: 2rem;
+  margin-bottom: 1rem;
 }
+
+
+.nutrition {
+  background-color: #CBDEBE;
+  color: #1E1E1E;
+
+
+}
+
+.bodyImage {
+  background-color: #F7DEBF;
+  color: #1E1E1E;
+
+}
+
+.sexualityAndHealth {
+  background-color: #CCD8CC;
+  color: #1E1E1E;
+
+
+}
+
+.mentalHealth {
+  background-color: #49413F;
+  color: #FFEEEE;
+}
+
+.nutrition, .bodyImage, .sexualityAndHealth, .mentalHealth {
+  border-radius: 20px; 
+  cursor: pointer;
+  font-family: 'Comfortaa', cursive;
+  text-align: left;
+  padding: 1.5rem;
+  outline: none;
+  border: none;
+}
+
+.addRecommendation {
+  background-color: #D6EAE7;
+  color: #3A3C3C;
+  font-family: 'Comfortaa', cursive;
+  border-radius: 20px; 
+  padding: 0.5rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  align-items: center;
+
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;            
+  width: 100%; 
+  margin-bottom: 1rem;                   
+}
+
 
 
 

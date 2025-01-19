@@ -72,4 +72,16 @@ const addInfluencer  = (req, res) => {
     }
 }
 
-export { getInfluencerById, addInfluencer };
+const getInfluencersByTopic = (req, res) => {
+  const { category } = req.params;
+  // Simulate finding data based on category
+  console.log("Fetching influencers for category:", req.params.category);
+  const foundInfluencers = influencers.filter(inf => inf.category === category);
+  if (foundInfluencers.length === 0) {
+      return res.status(404).json({ error: 'No influencers found for this category' });
+  }
+  res.json(foundInfluencers);
+};
+
+
+export { getInfluencerById, addInfluencer, getInfluencersByTopic };
