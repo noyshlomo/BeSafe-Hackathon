@@ -8,6 +8,8 @@ import InfluencerPage from './pages/InfluencerPage/InfluencerPage';
 import SleepTrackingPage from './pages/SleepTrackingPage/SleepTrackingPage';
 import SleepAnalytics from './pages/SleepAnalytics/SleepAnalytics';
 import InspirationDashboard from './pages/InspirationDashboard/InspirationDashboardPage';
+import TopicScreen from './pages/TopicScreen/TopicScreen';
+import AddRecommendation from './pages/AddRecommendation/AddRecommendation';
 import SleepTipsPage from './pages/SleepTipsPage/SleepTipsPage';
 
 function App() {
@@ -25,7 +27,10 @@ function App() {
         <main className={styles.main}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/influencer/:id" element={<InfluencerPage />}></Route>
+            <Route
+              path="/inspiration-boards/:category/:id"
+              element={<InfluencerPage />}
+            ></Route>
             <Route
               path="/sleep-tracking/:id"
               element={<SleepTrackingPage />}
@@ -35,10 +40,15 @@ function App() {
               element={<SleepTipsPage />}
             ></Route>
             <Route
-              path="/inspiration-dashboard/:id"
+              path="/inspiration-boards"
               element={<InspirationDashboard />}
             ></Route>
+            <Route
+              path="/topic-screen/:topic"
+              element={<TopicScreen />} 
+            ></Route>
             <Route path="/sleep-analytics/:id" element={<SleepAnalytics />} />
+            <Route path="/add-recommendation" element={<AddRecommendation />} />
           </Routes>
         </main>
         <footer className={styles.footer}>

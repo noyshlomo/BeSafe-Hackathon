@@ -1,37 +1,38 @@
-//import React from 'react';
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styles from './InspirationDashboard.module.css';
 
-
 const InspirationDashboard = () => {
-  console.log("enter insp function");
+  const navigate = useNavigate();  // Reactivate the navigate function
 
-  /*
-  const navigate = useNavigate();
-
-  const handleSleepNavigation = () => {
-    const userId = '2'; // Temp user ID
-    navigate(`/sleep-tracking/${userId}`);
+  // This function takes a topic name and navigates to the corresponding screen
+  const handleNavigation = (topic) => {
+    navigate(`/topic-screen/${topic}`);
   };
-  */
+
+  const handleAddRecommendation = () => {
+    navigate('/add-recommendation');
+  };
 
   return (
     <div className={styles.home}>
-      <h1 className={styles.headline}>Inspiration Dashboard</h1>
+      <h1 className={styles.headline}>Inspiration Boards</h1>
       <div className={styles.container}>
-        <button type="button">
-          <h2>Toppic 1</h2>
+        <button type="button" onClick={() => handleNavigation('nutrition')}>
+          <h2>Nutrition</h2>
         </button>
-        <button type="button">
-          <h2>Toppic 2</h2>
+        <button type="button" onClick={() => handleNavigation('body-image-and-self-esteem')}>
+          <h2>Body Image & Self-Esteem</h2>
         </button>
-        <button type="button">
-          <h2>Toppic 3</h2>
+        <button type="button" onClick={() => handleNavigation('sexuality-and-health')}>
+          <h2>Sexuality & Health</h2>
         </button>
-        <button type="button">
-          <h2>Toppic 4</h2>
+        <button type="button" onClick={() => handleNavigation('mental-health')}>
+          <h2> Mental Health</h2>
         </button>
       </div>
+      <button type="button" onClick={handleAddRecommendation}>
+          Add Recommendation
+      </button>
     </div>
   );
 };
