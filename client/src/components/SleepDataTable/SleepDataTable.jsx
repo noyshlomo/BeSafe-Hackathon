@@ -56,12 +56,26 @@ const SleepDataTable = ({ id }) => {
     return ((wakeDate - sleepDate) / (1000 * 60 * 60)).toFixed(2);
   };
 
+  const calculateAverageSleepTime = () => {
+    if (sleepData.length === 0) return "No Sleep History";
+
+    const totalSleepHours = sleepData.reduce((total, item) => {
+      const totalHours = calculateTotalHours(item.sleepTime, item.wakeUpTime);
+      return total + parseFloat(totalHours);
+    }, 0);
+  
+    const averageSleepTime = totalSleepHours / sleepData.length;
+    return averageSleepTime.toFixed(2);
+  };
+
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentSleepData = sleepData.slice(indexOfFirstPost, indexOfLastPost);
+  const AverageSleepTime = calculateAverageSleepTime();
 
   return (
     <div>
+     <h3>Average Sleep Time: {AverageSleepTime}</h3>
     <table className={styles.table}>
       <thead>
         <tr className={styles.tr}>
