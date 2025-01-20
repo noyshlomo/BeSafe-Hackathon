@@ -67,7 +67,15 @@
   letter-spacing: 100%; /* Set letter spacing to 5% */
   margin: 0;
   font-size: 0.75rem; /* Adjust the paragraph text size */
-  line-height: 1.5; /* Adds spacing between lines */
+  line-height: 1.2; /* Adds spacing between lines */
+}
+
+/* Adjust h2 and p within the buttons */
+.sleepButton h2, .inspirationButton h2,
+.sleepButton p, .inspirationButton p {
+  margin: 0;
+  overflow: hidden; /* Hides any overflow */
+  text-overflow: ellipsis; /* Adds ellipsis if text overflows */
 }
 
 
