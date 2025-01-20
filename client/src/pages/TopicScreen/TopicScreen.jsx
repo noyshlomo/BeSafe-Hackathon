@@ -56,7 +56,7 @@ const TopicScreen = () => {
             <button
               key={index}
               type="button"
-              onClick={() => handleInfluencerClick(influencer.id)}
+              onClick={() => handleInfluencerClick(influencer.influencerId)}
             >
               <h2>{influencer.name}</h2>
             </button>

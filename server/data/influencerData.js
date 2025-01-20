@@ -95,7 +95,14 @@ const influencers = [
     "facebook": 'https://www.facebook.com/drkojosarfo',
     "influencerId": 'c7fa3d4c-ac5e-4e35-8734-1b4ea507c9d8',
   },
-
+  {
+    category: 'Mental Health',
+    name: 'Noa',
+    instagram: 'https://www.instagram.com/meitalshap',
+    tiktok: '',
+    facebook: '',
+    influencerId: '8d4c81d0-a986-4bc1-b7fe-c53abf4c58d5',
+  },
 ];
 
 export default influencers;

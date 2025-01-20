@@ -29,3 +29,9 @@
   cursor: pointer; /* Changes cursor to pointer to indicate a clickable button */
   display: inline-flex; /* Makes button fit the image size */
 }
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
