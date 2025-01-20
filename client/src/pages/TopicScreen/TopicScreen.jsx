@@ -1,36 +1,69 @@
-import { useParams } from 'react-router-dom';
-import styles from "./TopicScreen.module.css";
-
-const topicNames = {
-  'nutrition': 'Nutrition',
-  'body-image-and-self-esteem': 'Body Image & Self-Esteem',
-  'sexuality-and-health': 'Sexuality & Health',
-  'mental-health': 'Mental Health'
-};
+import { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+//import styles from './TopicScreen.module.css';
 
 const TopicScreen = () => {
-  const { topic } = useParams(); // topic parameter from the URL
+  const { category } = useParams(); // topic parameter from the URL
+  const [influencers, setInfluencers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    // Fetch influencers based on the category
+    const fetchInfluencers = async () => {
+      if (!category) {
+        setError('Category is not defined.');
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const response = await fetch(
+          `http://localhost:5000/inspiration-boards/${category}`
+        );
+        if (!response.ok) {
+          throw new Error('Failed to fetch influencers');
+        }
+        const data = await response.json();
+        if (data.length === 0) {
+          setError('No influencers found for this category');
+        } else {
+          setInfluencers(data); // Set fetched data
+          setError(null); // Clear any previous errors
+        }
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchInfluencers();
+  }, [category]);
+
+  const handleInfluencerClick = (id) => {
+    navigate(`/inspiration-boards/${category}/${id}`); // Navigate to influencer detail page
+  };
 
   return (
-    <div className={styles.home}>
-      <h1 className={styles.headline}>{topicNames[topic]} Dashboard</h1>
-      <div className={styles.container}>
-        <button type="button">
-          <h2>Influencer 1</h2>
-        </button>
-        <button type="button">
-          <h2>Influencer 2</h2>
-        </button>
-        <button type="button">
-          <h2>Influencer 3</h2>
-        </button>
-        <button type="button">
-          <h2>Influencer 4</h2>
-        </button>
-      </div>
+    <div>
+      <h1>{category} board</h1>
+      {loading && <p>Loading...</p>}
+      {!loading && !error && influencers.length > 0 && (
+        <div>
+          {influencers.map((influencer, index) => (
+            <button
+              key={index}
+              type="button"
+              onClick={() => handleInfluencerClick(influencer.id)}
+            >
+              <h2>{influencer.name}</h2>
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
-
 export default TopicScreen;
