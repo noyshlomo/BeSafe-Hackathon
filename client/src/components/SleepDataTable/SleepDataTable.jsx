@@ -75,7 +75,7 @@ const SleepDataTable = ({ id }) => {
 
   return (
     <div>
-     <h3>Average Sleep Time: {AverageSleepTime}</h3>
+     <h4>Avg Sleep Time: {AverageSleepTime}</h4>
     <table className={styles.table}>
       <thead>
         <tr className={styles.tr}>

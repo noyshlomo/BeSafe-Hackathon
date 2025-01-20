@@ -13,15 +13,15 @@ const Pagination = ({itemsPerPage, length, onPageChange, currentPage}) => {
 
     return (
         <div className={styles.pagination}>
-             <button disabled={currentPage === 1 ? true : false} onClick={() => handlePagination(pageNumber)}>
+            <button disabled={currentPage === 1 ? true : false} onClick={() => handlePagination(currentPage-1)}>
                 &lt;&lt;
             </button>
-        
+
             {paginationNumbers.map((pageNumber) => (
                 <button key={pageNumber} onClick={() => handlePagination(pageNumber)}>{pageNumber}</button>
             ))}
-
-            <button disabled={currentPage === paginationNumbers.length ? true : false} onClick={() => handlePagination(pageNumber)}>
+            
+            <button disabled={currentPage === paginationNumbers.length ? true : false} onClick={() => handlePagination(currentPage+1)}>
             &gt;&gt;
             </button>
 
