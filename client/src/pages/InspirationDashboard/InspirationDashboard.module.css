@@ -62,10 +62,16 @@
   border-radius: 20px; 
   cursor: pointer;
   font-family: 'Comfortaa', cursive;
-  text-align: left;
   padding: 1.5rem;
   outline: none;
   border: none;
+}
+.mentalHealth h2{
+  color: rgb(255, 255, 255);
+}
+
+.nutrition h2, .bodyImage h2, .sexualityAndHealth h2, .mentalHealth h2{
+  text-align: left;
 }
 
 .addRecommendation {
@@ -78,6 +84,7 @@
   outline: none;
   border: none;
   align-items: center;
+  text-align: left;
 
 }
 
