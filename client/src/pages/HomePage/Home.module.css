@@ -82,4 +82,7 @@
   color: rgb(118, 133, 179); /* Pastel green color */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a light shadow for a shaded effect */
   margin: 20px 0; /* Add some space around the text */
+  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
