@@ -1,15 +1,15 @@
 .table {
-    border-collapse: collapse; /* Ensures borders do not double up */
-    width: 100%; /* Optional: Makes the table take the full width */
+    border-collapse: collapse;
+    width: 100%;
   }
   
   .th, .td {
-    padding: 0.5rem; /* Adds space inside the cells */
-    text-align: center; /* Centers text horizontally */
+    padding: 0.5rem;
+    text-align: center;
   }
   
   .tr {
-    border-bottom: 0.1rem solid rgba(128, 128, 128, 0.495); /* Adds a horizontal line between rows */
+    border-bottom: 0.1rem solid rgba(128, 128, 128, 0.495);
   }
 
   .deleteButton {
@@ -19,6 +19,10 @@
     font-size: 1rem;
   }
   
+  .avg{
+    font-size: 20px;
+    margin-top: 3%;
+  }
 
   
   
