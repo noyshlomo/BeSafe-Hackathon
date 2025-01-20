@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from "./Pagination.module.css"
 
 const Pagination = ({itemsPerPage, length, onPageChange, currentPage}) => {
