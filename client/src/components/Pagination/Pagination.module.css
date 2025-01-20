@@ -1,7 +1,31 @@
-.pagination{
-    display: inline-block;
-    margin-top: 15px;
-    color: black;
+.pagination {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .pagination button {
     padding: 8px 16px;
-    text-decoration: none;
-}
+    border: 1px solid #e2e8f0;
+    background-color: white;
+    color: #1a202c;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+  
+  .pagination button:disabled {
+    background-color: #f1f5f9;
+    color: #94a3b8;
+    cursor: not-allowed;
+  }
+  
+  /* Add this class to your current page button */
+  .pagination button.active {
+    background-color: #9dd1c7;
+    color: white;
+    border-color: #cbe0dc;
+  }
