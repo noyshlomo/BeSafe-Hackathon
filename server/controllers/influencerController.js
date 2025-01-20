@@ -92,8 +92,6 @@ const addInfluencer = (req, res) => {
 
 const getInfluencersByTopic = (req, res) => {
   const { category } = req.params;
-  // Simulate finding data based on category
-  console.log('Fetching influencers for category:', req.params.category);
   const foundInfluencers = influencers.filter(
     (inf) => inf.category === category
   );
@@ -105,4 +103,30 @@ const getInfluencersByTopic = (req, res) => {
   res.json(foundInfluencers);
 };
 
-export { getInfluencerById, addInfluencer, getInfluencersByTopic };
+const addComment = (req, res) => {
+  const { id } = req.params;
+  const { content } = req.body;
+  const influencerId = parseInt(id);
+
+  const newComment = {
+    id: comments.length + 1, // Set a new id
+    userName: 'Candy',
+    influencerId: influencerId,
+    content,
+  };
+  comments.push(newComment);
+  fs.writeFile(
+    './data/comments.js',
+    `const comments = ${JSON.stringify(comments)};\n\nexport default comments;`,
+    (err) => {
+      if (err) {
+        console.log('Error writing to comments file:', err);
+        return res.status(500).send('Error saving comment');
+      }
+
+      return res.json({ newComment });
+    }
+  );
+};
+
+export { getInfluencerById, addInfluencer, getInfluencersByTopic, addComment };
