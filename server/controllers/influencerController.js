@@ -19,7 +19,15 @@ const getInfluencerById = (req, res) => {
     (comment) => comment.influencerId == id
   );
 
-  res.status(200).json({ influencer, comments: influencerComments });
+  // Send the influencer info along with social media links
+  res.status(200).json({
+    influencer: {
+      name: influencer.name,
+      instagram: influencer.instagram,
+      facebook: influencer.facebook,
+      tiktok: influencer.tiktok,
+    },
+    comments: influencerComments,  });
 };
 
 // Helper function to check for duplicate URLs
