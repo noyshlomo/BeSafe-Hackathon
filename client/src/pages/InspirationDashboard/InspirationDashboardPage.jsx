@@ -26,10 +26,10 @@ const InspirationDashboard = () => {
           <h2>Nutrition</h2>
         </button>
         <button className={styles.bodyImage} type="button" onClick={() => handleNavigation('body-image-and-self-esteem')}>
-          <h2>Body Image & Self-Esteem</h2>
+          <h2>Body Image & <br /> Self-Esteem</h2>
         </button>
         <button className={styles.sexualityAndHealth} type="button" onClick={() => handleNavigation('sexuality-and-health')}>
-          <h2>Sexuality & Health</h2>
+          <h2>Sexuality <br /> & Health</h2>
         </button>
         <button className={styles.mentalHealth} type="button" onClick={() => handleNavigation('mental-health')}>
           <h2> Mental Health</h2>
