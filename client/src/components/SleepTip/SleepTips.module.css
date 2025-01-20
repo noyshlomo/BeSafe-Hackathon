@@ -73,6 +73,7 @@
   .analysisText {
     line-height: 1.6;
     color: #2a2a2a;
+    text-align: left;
   }
   
   /* Responsive styles */

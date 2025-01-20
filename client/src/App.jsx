@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './pages/HomePage/HomePage';
 import styles from './styles/App.module.css';
 
@@ -12,9 +12,11 @@ import TopicScreen from './pages/TopicScreen/TopicScreen';
 import AddRecommendation from './pages/AddRecommendation/AddRecommendation';
 import SleepTipsPage from './pages/SleepTipsPage/SleepTipsPage';
 
-function App() {
+
+function AppContent() {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
   return (
-    <BrowserRouter>
       <div className={styles.app}>
         <header className={styles.appHeader}>
           <img src={hamburger} alt="hamburger" className={styles.hamburger} />
@@ -22,7 +24,11 @@ function App() {
             <Link to="/" className={styles.appLink}>
               Home
             </Link>
-            <button className={styles.goBackButton} onClick={() => window.history.back()}>Go Back</button>
+            {!isHomePage && (
+            <button className={styles.goBackButton} onClick={() => window.history.back()}>
+              Go Back
+            </button>
+            )}
           </nav>
         </header>
         <main className={styles.main}>
@@ -52,10 +58,14 @@ function App() {
             <Route path="/add-recommendation" element={<AddRecommendation />} />
           </Routes>
         </main>
-        <footer className={styles.footer}>
-          <p>&copy; 2025 My App</p>
-        </footer>
       </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
   );
 }
