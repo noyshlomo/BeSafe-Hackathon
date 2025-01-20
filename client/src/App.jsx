@@ -52,9 +52,6 @@ function App() {
             <Route path="/add-recommendation" element={<AddRecommendation />} />
           </Routes>
         </main>
-        <footer className={styles.footer}>
-          <p>&copy; 2025 My App</p>
-        </footer>
       </div>
     </BrowserRouter>
   );
