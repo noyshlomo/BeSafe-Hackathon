@@ -1,34 +1,45 @@
-
-
 .home {
   text-align: center;
   padding: 20px;
 }
 
 .headline {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   color: #1E1E1E;
-  text-align: left; /* Align text to the left */
-  margin-left: 0;  /* Ensure it starts right at the edge */
-  padding-left: 0; /* Remove padding on the left if any */
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
 }
-
 
 .container {
   display: flex;
-  flex-direction: column; /* or column */
-  gap: 3rem;
-  
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
+  justify-content: center; /* Centers the buttons in each row */
+  gap: 20px; /* Adds consistent spacing between items */
+  margin-top: 20px;
 }
 
+button {
+  background-color: #dcefeb;
+  border: 2px solid #dcefeb; /* Border color to match the theme */
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 200px; /* Ensures two buttons per row with some spacing */
+  height: 120px; /* Fixed height for uniform card size */
+  margin: 10px;
+  box-sizing: border-box; /* Includes padding and border in width calculation */
+}
 
+button:hover {
+  background-color: #f7f7f7;
+}
 
-
-
-
-
-
-
-
-
+button h2 {
+  font-size: 1.1rem;
+  color: #49413F;
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+}
