@@ -16,6 +16,7 @@
   display: flex;
   flex-wrap: wrap; /* Allows items to wrap onto the next line */
   justify-content: center; /* Centers the buttons in each row */
+  gap: 20px; /* Spacing between buttons */
   margin-top: 20px;
 }
 
