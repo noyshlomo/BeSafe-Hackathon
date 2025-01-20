@@ -24,6 +24,8 @@
 
 
 .nutrition {
+  background-image: url('../../assets/nutrition.png');
+  background-size: 130px 90px;
   background-color: #CBDEBE;
   color: #1E1E1E;
 
@@ -31,12 +33,16 @@
 }
 
 .bodyImage {
+  background-image: url('../../assets/body-image-and-self-esteem.png');
+  background-size: 150px 124px;
   background-color: #F7DEBF;
   color: #1E1E1E;
 
 }
 
 .sexualityAndHealth {
+  background-image: url('../../assets/sexuality-and-health.png');
+  background-size: 95px 95px;
   background-color: #CCD8CC;
   color: #1E1E1E;
 
@@ -44,11 +50,15 @@
 }
 
 .mentalHealth {
+  background-image: url('../../assets/mental-health.png');
+  background-size: 120px 100px;
   background-color: #49413F;
   color: #FFEEEE;
 }
 
 .nutrition, .bodyImage, .sexualityAndHealth, .mentalHealth {
+  background-repeat: no-repeat;
+  background-position: 97% 50%; /* Adjust to create visual padding */
   border-radius: 20px; 
   cursor: pointer;
   font-family: 'Comfortaa', cursive;
