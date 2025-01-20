@@ -51,3 +51,12 @@
 .sleep-tracking-form-submit:active {
   background-color: #CCE6E2;
 }
+
+
+.successMessage{
+  color: green;
+}
+
+.existMessage{
+  color:red;
+}

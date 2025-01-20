@@ -37,3 +37,11 @@
 .influencerFormButton:hover {
   background-color: #cbe0dc;
 }
+
+.successMessage{
+  color: green;
+}
+
+.existMessage{
+  color:red;
+}

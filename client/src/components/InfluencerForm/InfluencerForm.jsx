@@ -8,6 +8,8 @@ const InfluencerForm = () => {
     const [instagram, setInstagram] = useState("");
     const [tiktok, setTiktok] = useState("");
     const [facebook, setFacebook] = useState("");
+    const [success, setSuccess] = useState("");
+    const [exist, setExist] = useState("");
 
     const handelSubmit = async (event) => {
         event.preventDefault();
@@ -30,7 +32,10 @@ const InfluencerForm = () => {
           });
 
         if (!response.ok) {
-            alert('This influencer has already been recommended.');
+            setExist('This influencer has already been recommended.');
+        }
+        else{
+            setSuccess('Influencer added to topic successfully');
         }
         } catch (error) {
             console.error('Error adding influencer:', error);
@@ -52,7 +57,12 @@ const InfluencerForm = () => {
                     name="topic" 
                     required 
                     value={category} 
-                    onChange={(e) => setCategory(e.target.value)} 
+                    onChange={(e) => {
+                        setCategory(e.target.value)
+                        setExist("");
+                        setSuccess("");
+                    }} 
+
                 >
                     <option value="" disabled>
                         Select Topics
@@ -72,7 +82,11 @@ const InfluencerForm = () => {
                     required 
                     placeholder="Enter Influencer's Name"
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => {
+                        setName(e.target.value)
+                        setExist("");
+                        setSuccess("");
+                    }}
                 />
 
                 <label className={styles.influencerFormLabel} htmlFor="instagram">Instagram URL</label>
@@ -82,7 +96,11 @@ const InfluencerForm = () => {
                     id="instagram" 
                     placeholder="Enter Instagram URL"
                     value={instagram}
-                    onChange={(e) => setInstagram(e.target.value)}
+                    onChange={(e) => {
+                        setInstagram(e.target.value)
+                        setExist("");
+                        setSuccess("");
+                    }}
                 />
 
                 <label className={styles.influencerFormLabel} htmlFor="tiktok">Tiktok URL</label>
@@ -92,7 +110,11 @@ const InfluencerForm = () => {
                     id="tiktok" 
                     placeholder="Enter Tiktok URL"
                     value={tiktok}
-                    onChange={(e) => setTiktok(e.target.value)}
+                    onChange={(e) => {
+                        setTiktok(e.target.value)
+                        setExist("");
+                        setSuccess("");
+                    }}
                 />
 
                 <label className={styles.influencerFormLabel} htmlFor="facebook">Facebook URL</label>
@@ -102,11 +124,17 @@ const InfluencerForm = () => {
                     id="facebook" 
                     placeholder="Enter Facebook URL"
                     value={facebook}
-                    onChange={(e) => setFacebook(e.target.value)}
+                    onChange={(e) => {
+                        setFacebook(e.target.value)
+                        setExist("");
+                        setSuccess("");
+                    }}
                 />
 
                 <button className={styles.influencerFormButton} type="submit">Add</button>
             </form>
+            {success && <p className={styles.successMessage}>{success}</p>}
+            {exist && <p className={styles.existMessage}>{exist}</p>}
         </div>
     );
 };
