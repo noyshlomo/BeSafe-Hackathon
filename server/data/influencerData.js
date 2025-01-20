@@ -1,39 +1,5 @@
 const influencers = [
   {
-    "id": 1,
-    "category": "nutrition",
-    "name": "Meital Shapiro",
-    "instagram": "https://www.instagram.com/meitalshapiro",
-    "facebook": "https://www.facebook.com/StankaShapiro",
-    "tiktok": ""
-  },
-  {
-    "id": 2,
-    "category": "mental-health",
-    "name": "Liran Kohener",
-    "instagram": "https://www.instagram.com/liranko",
-    "facebook": "",
-    "tiktok": ""
-  },
-  {
-    "id": 3,
-    "category": "nutrition",
-    "name": "Noa",
-    "instagram": "https://www.instagram.com/meitalshapiro",
-    "tiktok": "",
-    "facebook": "",
-    "influencerId": "6bc8adc6-fa0b-442c-8c5b-d619dd8e8dc4"
-  },
-  {
-    "id": 4,
-    "category": "sexuality-and-health",
-    "name": "health",
-    "instagram": "https://www.instagram.com/meitalshapiro",
-    "tiktok": "",
-    "facebook": "",
-    "influencerId": "67bfbff4-ca67-44f5-abdd-9b9079cb441c"
-  },
-  {
     "category": 'nutrition',
     "name": 'Mor Bushari',
     "instagram": 'https://www.instagram.com/mor_bushari_nutrition/?igsh=MTVldGFxa2V0Y2ltMA%3D%3D#',
@@ -127,7 +93,7 @@ const influencers = [
     "instagram": 'https://www.instagram.com/drkojosarfo/?utm_source=ig_embed&ig_rid=af532c62-fed3-4c35-ac85-3c2f464ce18d',
     "tiktok": 'https://www.tiktok.com/@dr.kojosarfo',
     "facebook": 'https://www.facebook.com/drkojosarfo',
-    "influencerId": 'c7fa3d4c-ac5e-4e35-8734-1b4ea507c9d8',
+    influencerId: 'c7fa3d4c-ac5e-4e35-8734-1b4ea507c9d8',
   },
 
 ];
