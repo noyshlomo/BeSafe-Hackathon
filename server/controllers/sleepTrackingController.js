@@ -41,7 +41,6 @@ const getSleepData = (req, res) => {
             console.error('Invalid data source format');
             return res.status(500).send('Server configuration error');
         }
-
         // Filter the data to only include entries for the specified user
         const filteredData = sleepHoursData.filter(data => data.userId === userId);
 

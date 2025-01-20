@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Pagination.module.css"
 
 const Pagination = ({itemsPerPage, length, onPageChange, currentPage}) => {
     const paginationNumbers = [];
@@ -11,10 +12,19 @@ const Pagination = ({itemsPerPage, length, onPageChange, currentPage}) => {
     }
 
     return (
-        <div className='pagination'>
-        {paginationNumbers.map((pageNumber) => (
-            <button key={pageNumber} onClick={() => handlePagination(pageNumber)}>{pageNumber}</button>
-        ))}
+        <div className={styles.pagination}>
+             <button disabled={currentPage === 1 ? true : false} onClick={() => handlePagination(pageNumber)}>
+                &lt;&lt;
+            </button>
+        
+            {paginationNumbers.map((pageNumber) => (
+                <button key={pageNumber} onClick={() => handlePagination(pageNumber)}>{pageNumber}</button>
+            ))}
+
+            <button disabled={currentPage === paginationNumbers.length ? true : false} onClick={() => handlePagination(pageNumber)}>
+            &gt;&gt;
+            </button>
+
         </div>
     );
 };
