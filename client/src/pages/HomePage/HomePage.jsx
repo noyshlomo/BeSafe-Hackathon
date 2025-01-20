@@ -22,7 +22,6 @@ const Home = () => {
     <div className={styles.home}>
       <h1 className={styles.headline}>Welcome back, Candy</h1>
       <div className={styles.container}>
-        <div>Your Goals</div>
         <button
           type="button"
           className={styles.sleepButton}
