@@ -5,9 +5,8 @@ import Pagination from '../Pagination/Pagination';
 
 const SleepDataTable = ({ id }) => {
   const [sleepData, setSleepData] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(5);
+  const [postsPerPage] = useState(5);
 
   useEffect(() => {
     const fetchSleepData = async () => {
