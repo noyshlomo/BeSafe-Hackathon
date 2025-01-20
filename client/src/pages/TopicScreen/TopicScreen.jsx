@@ -46,15 +46,24 @@ const TopicScreen = () => {
     navigate(`/inspiration-boards/${category}/${id}`); // Navigate to influencer detail page
   };
 
+  const categoryMap = {
+    nutrition: 'Nutrition',
+    'body-image-and-self-esteem': 'Body Image & Self-Esteem',
+    'sexuality-and-health': 'Sexuality & Health',
+    'mental-health': 'Mental Health',
+  };
+
+  const categoryName = categoryMap[category];
+
   return (
     <div>
-      <h1>{category} board</h1>
+      <h1>{categoryName} Board</h1>
       {loading && <p>Loading...</p>}
       {!loading && !error && influencers.length > 0 && (
         <div>
           {influencers.map((influencer, index) => (
             <button
-            className='influencer-button'
+              className="influencer-button"
               key={index}
               type="button"
               onClick={() => handleInfluencerClick(influencer.influencerId)}
