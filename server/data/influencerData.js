@@ -93,7 +93,7 @@ const influencers = [
     "instagram": 'https://www.instagram.com/drkojosarfo/?utm_source=ig_embed&ig_rid=af532c62-fed3-4c35-ac85-3c2f464ce18d',
     "tiktok": 'https://www.tiktok.com/@dr.kojosarfo',
     "facebook": 'https://www.facebook.com/drkojosarfo',
-    influencerId: 'c7fa3d4c-ac5e-4e35-8734-1b4ea507c9d8',
+    "influencerId": 'c7fa3d4c-ac5e-4e35-8734-1b4ea507c9d8',
   },
 
 ];
