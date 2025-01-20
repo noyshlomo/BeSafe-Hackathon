@@ -69,7 +69,7 @@ const SleepTip = ({ userId }) => {
         } else {
             fetchTip(false);
         }
-    }, [userId]);
+    }, [userId, fetchTip]);
 
     // Save tip to localStorage whenever it updates
     useEffect(() => {

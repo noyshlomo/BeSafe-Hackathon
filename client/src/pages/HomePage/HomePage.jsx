@@ -1,9 +1,27 @@
 //import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Home.module.css';
+import { useEffect, useState } from 'react';
 
 const Home = () => {
+  const [affirmation, setAffirmation] = useState('');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchAffirmation = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/affirmation');
+        if (!response.ok) {
+          throw new Error('Failed to fetch affirmation');
+        }
+        const data = await response.json();
+        setAffirmation(data.affirmation);
+      } catch (err) {
+        console.log('Error fetching affirmation: ', err);
+      }
+    };
+    fetchAffirmation();
+  }, []);
 
   const handleSleepNavigation = () => {
     const userId = '2'; // Temp user ID
@@ -21,6 +39,7 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <h1 className={styles.headline}>Welcome back, Candy</h1>
+      <p className={styles.affirmationText}>{affirmation}</p>
       <div className={styles.container}>
         <button
           type="button"
@@ -29,7 +48,7 @@ const Home = () => {
         >
           <h2>Sleep Tracking</h2>
           <p>
-            Update ypur sleep log, get your sleep analytics and change your
+            Update your sleep log, get your sleep analytics and change your
             goals
           </p>
         </button>
