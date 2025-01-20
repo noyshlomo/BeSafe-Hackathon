@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import { v4 as uuidv4 } from 'uuid';
 import influencers from '../data/influencerData.js';
 import comments from '../data/comments.js';
+import topics from '../data/topicsData.js';
 
 const getInfluencerById = (req, res) => {
   const { category, id } = req.params;
@@ -37,8 +38,11 @@ const checkDuplicateUrl = (url, fieldName) => {
 
 const addInfluencer = (req, res) => {
   const newInfluencerData = req.body;
-
+ 
   try {
+    const topic = topics.find((t) => t.category === newInfluencerData.category);
+    newInfluencerData.category = topic.url;
+
     const instagramCheck = checkDuplicateUrl(
       newInfluencerData.instagram,
       'instagram'
