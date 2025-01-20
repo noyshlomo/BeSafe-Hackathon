@@ -41,7 +41,6 @@ const getSleepData = (req, res) => {
             console.error('Invalid data source format');
             return res.status(500).send('Server configuration error');
         }
-
         // Filter the data to only include entries for the specified user
         const filteredData = sleepHoursData.filter(data => data.userId === userId);
 
@@ -49,14 +48,12 @@ const getSleepData = (req, res) => {
             return res.status(404).send('No sleep data found for the user');
         }
 
-        res.json(filteredData);  // Send the filtered data back as JSON
+        res.json(filteredData.reverse());  // Send the filtered data back as JSON
     } catch (error) {
         console.error('Fetch Error:', error);
         res.status(500).send('Error fetching sleep data');
     }
 };
-
-
 
 const deleteSleepData = (req, res) => {
     const { userId, sleepId } = req.params; // Extracting userId and sleepId from the request parameters
