@@ -10,6 +10,7 @@ import SleepAnalytics from './pages/SleepAnalytics/SleepAnalytics';
 import InspirationDashboard from './pages/InspirationDashboard/InspirationDashboardPage';
 import TopicScreen from './pages/TopicScreen/TopicScreen';
 import AddRecommendation from './pages/AddRecommendation/AddRecommendation';
+import SleepTipsPage from './pages/SleepTipsPage/SleepTipsPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Link to="/" className={styles.appLink}>
               Home
             </Link>
+            <button className={styles.goBackButton} onClick={() => window.history.back()}>Go Back</button>
           </nav>
         </header>
         <main className={styles.main}>
@@ -33,6 +35,10 @@ function App() {
             <Route
               path="/sleep-tracking/:id"
               element={<SleepTrackingPage />}
+            ></Route>
+            <Route
+              path="/sleep-tips/:id"
+              element={<SleepTipsPage />}
             ></Route>
             <Route
               path="/inspiration-boards"

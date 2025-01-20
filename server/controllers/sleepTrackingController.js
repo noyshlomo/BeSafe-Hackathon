@@ -88,7 +88,6 @@ const deleteSleepData = (req, res) => {
 };
 
 
-// Set saveSleepData as the default export
 export default saveSleepData;
 
 // Export other functions as named exports
