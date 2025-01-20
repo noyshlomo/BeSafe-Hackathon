@@ -6,11 +6,11 @@
 .appHeader {
   background-color: rgba(241, 248, 247, 0.6); /* 60% opacity */
   padding: 5px 30px 5px 30px;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 1rem;
+  align-items: center;   
 }
 
 .hamburger {
@@ -22,17 +22,28 @@
 .appNav {
   display: flex;
   gap: 20px;
+  text-align: center;
 }
 
 .appLink {
   color: rgb(12, 10, 10);
   text-decoration: none;
   font-size: 1.2em;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;  
+  align-items: center;     
 }
 
-.appLink:hover {
-  text-decoration: underline;
+.appLink img {
+  height: 40px;  
+  width: auto;  
+  justify-content: center;  
+  align-items: center;   
+
 }
+
+
 
 .main {
   padding: 20px;
