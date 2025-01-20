@@ -5,9 +5,11 @@ import styles from  './sleepTrackingForm.module.css';
 const SleepTrackingForm = ({ userId }) => {
   const [sleepTime, setSleepTime] = useState("");
   const [wakeUpTime, setWakeUpTime] = useState("");
+  const [success, setSuccess] = useState("");
+  const [exist, setExist] = useState("");
   const today = new Date().toISOString().split("T")[0];
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const formData = {
@@ -17,7 +19,7 @@ const SleepTrackingForm = ({ userId }) => {
         date: today,
       };
 
-    fetch('http://localhost:5000/sleep-tracking/', {
+    const response = await fetch('http://localhost:5000/sleep-tracking/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,11 +27,18 @@ const SleepTrackingForm = ({ userId }) => {
         body: JSON.stringify(formData),
       })
       
+    if (!response.ok) {
+        setExist('There is an error, try again later.');
+    }
+    else{
+        setSuccess('sleep time saved successfully');
+    }
     setSleepTime("");
     setWakeUpTime("");
   };
 
   return (
+    <div>
     <form className={styles['sleep-tracking-form']} onSubmit={handleSubmit}>
       <div className={styles['sleep-tracking-form-group']}>
         <label htmlFor="sleepTime">Sleep Time:</label>
@@ -37,7 +46,11 @@ const SleepTrackingForm = ({ userId }) => {
           type="time"
           id="sleepTime"
           value={sleepTime}
-          onChange={(e) => setSleepTime(e.target.value)}
+          onChange={(e) => {
+            setSleepTime(e.target.value)
+            setExist("");
+            setSuccess("");
+          }}
           required
         />
       </div>
@@ -48,7 +61,11 @@ const SleepTrackingForm = ({ userId }) => {
           type="time"
           id="wakeUpTime"
           value={wakeUpTime}
-          onChange={(e) => setWakeUpTime(e.target.value)}
+          onChange={(e) => {
+            setWakeUpTime(e.target.value)
+            setExist("");
+            setSuccess("");
+          }}
           required
         />
       </div>
@@ -57,6 +74,9 @@ const SleepTrackingForm = ({ userId }) => {
         Send
       </button>
     </form>
+    {success && <p className={styles.successMessage}>{success}</p>}
+    {exist && <p className={styles.existMessage}>{exist}</p>}
+    </div>
   );
 };
 
