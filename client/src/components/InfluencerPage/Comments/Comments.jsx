@@ -87,7 +87,7 @@ const Comments = () => {
 
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.title}>
         Comments{' '}
         <button className={styles.button} onClick={handleToggleTextarea}>
           <img src={plusSvg} alt="plus" />
