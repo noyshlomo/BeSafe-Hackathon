@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './SleepDataTable.module.css';
+import Pagination from '../Pagination/Pagination';
 
 const SleepDataTable = ({ id }) => {
   const [sleepData, setSleepData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(5);
 
   useEffect(() => {
     const fetchSleepData = async () => {
@@ -52,7 +55,27 @@ const SleepDataTable = ({ id }) => {
     return ((wakeDate - sleepDate) / (1000 * 60 * 60)).toFixed(2);
   };
 
+  const calculateAverageSleepTime = () => {
+    if (sleepData.length === 0) return "No Sleep History";
+
+    const totalSleepHours = sleepData.reduce((total, item) => {
+      const totalHours = calculateTotalHours(item.sleepTime, item.wakeUpTime);
+      return total + parseFloat(totalHours);
+    }, 0);
+  
+    const averageSleepTime = totalSleepHours / sleepData.length;
+    return averageSleepTime.toFixed(2);
+  };
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentSleepData = sleepData.slice(indexOfFirstPost, indexOfLastPost);
+  const AverageSleepTime = calculateAverageSleepTime();
+
   return (
+    <div>
+     <h4>Avg Sleep Time:   <div className={styles.avg}>{AverageSleepTime}</div></h4>
+   
     <table className={styles.table}>
       <thead>
         <tr className={styles.tr}>
@@ -64,7 +87,7 @@ const SleepDataTable = ({ id }) => {
         </tr>
       </thead>
       <tbody>
-        {sleepData.map((item) => {
+        {currentSleepData.map((item) => {
           const totalHours = calculateTotalHours(item.sleepTime, item.wakeUpTime);
           return (
             <tr key={item.sleepId} className={styles.tr}>
@@ -80,11 +103,19 @@ const SleepDataTable = ({ id }) => {
                  🗑️
                 </button>  </td>
             </tr>
-
           );
         })}
       </tbody>
     </table>
+
+    <Pagination
+    itemsPerPage={5}
+    length={sleepData.length}
+    onPageChange={setCurrentPage}
+    currentPage={currentPage}
+    />
+
+    </div>
   );
 };
 
