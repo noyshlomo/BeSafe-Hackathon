@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-//import styles from './TopicScreen.module.css';
+import './TopicScreen.module.css';
 
 const TopicScreen = () => {
   const { category } = useParams(); // topic parameter from the URL
