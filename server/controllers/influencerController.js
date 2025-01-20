@@ -8,7 +8,7 @@ import comments from '../data/comments.js';
 const getInfluencerById = (req, res) => {
   const { category, id } = req.params;
   const influencer = influencers.find(
-    (inf) => inf.id === parseInt(id, 10) && inf.category === category
+    (inf) => inf.influencerId === id && inf.category === category
   );
 
   if (!influencer) {
@@ -106,12 +106,11 @@ const getInfluencersByTopic = (req, res) => {
 const addComment = (req, res) => {
   const { id } = req.params;
   const { content } = req.body;
-  const influencerId = parseInt(id);
 
   const newComment = {
     id: comments.length + 1, // Set a new id
     userName: 'Candy',
-    influencerId: influencerId,
+    influencerId: id,
     content,
   };
   comments.push(newComment);
