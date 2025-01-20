@@ -58,6 +58,10 @@
   margin: 0; /* Reduces the bottom margin to 5px */
 }
 
+.sleepButton h2{
+  color: rgb(255, 255, 255);
+}
+
 .sleepButton .inspirationButton p {
   line-height: 20px; /* Set line height to 20px */
   letter-spacing: 100%; /* Set letter spacing to 5% */
