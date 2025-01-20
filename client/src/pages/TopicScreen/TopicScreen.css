@@ -6,7 +6,7 @@
   margin-top: 20px;
 }
 
-button {
+.influencer-button {
   background-color: #dcefeb;
   border: 2px solid #dcefeb; /* Border color to match the theme */
   border-radius: 10px;

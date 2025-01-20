@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import './TopicScreen.module.css';
+import './TopicScreen.css';
 
 const TopicScreen = () => {
   const { category } = useParams(); // topic parameter from the URL
@@ -54,6 +54,7 @@ const TopicScreen = () => {
         <div>
           {influencers.map((influencer, index) => (
             <button
+            className='influencer-button'
               key={index}
               type="button"
               onClick={() => handleInfluencerClick(influencer.influencerId)}
