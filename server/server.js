@@ -5,6 +5,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import influencerRoutes from './routes/influencerRoutes.js';
 import sleepTrackingRoutes from './routes/sleepTrackingRoutes.js';
+import homeRoutes from './routes/homeRoutes.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,6 +23,7 @@ app.use(
   })
 );
 
+app.use('/affirmation', homeRoutes);
 app.use('/inspiration-boards', influencerRoutes);
 app.use('/sleep-tracking', sleepTrackingRoutes);
 

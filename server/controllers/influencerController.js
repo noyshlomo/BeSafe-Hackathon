@@ -20,7 +20,7 @@ const getInfluencerById = (req, res) => {
     (comment) => comment.influencerId == id
   );
 
-  res.status(200).json({ influencer, comments: influencerComments });
+  res.status(200).json({ influencer, comments: influencerComments.reverse() });
 };
 
 // Helper function to check for duplicate URLs
@@ -38,7 +38,7 @@ const checkDuplicateUrl = (url, fieldName) => {
 
 const addInfluencer = (req, res) => {
   const newInfluencerData = req.body;
- 
+
   try {
     const topic = topics.find((t) => t.category === newInfluencerData.category);
     newInfluencerData.category = topic.url;
