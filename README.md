@@ -1,21 +1,28 @@
-# QueenB X AppsFlyer - BeSafe Hackathon 2025
+# Wellness Web App - QueenB X AppsFlyer - BeSafe Hackathon 2025
 
-This project template is designed for junior developers aimed at gaining hands-on experience in full-stack development. 
-This project includes a Node.js server with Express and a React client (powered by Vite), providing an opportunity to engage in frontend development, backend development, and API integration.
-Specifically the template is a full-stack MERN application for managing a library of rubber ducks - but you can modify it and build a library application of your choice.
+This project was developed as part of the QueenB x AppsFlyer BeSafe Hackathon 2025, focusing on sleep tracking and inspiration boards. The application helps users monitor their sleep patterns and maintain a board of inspirational content.
 
 ## Introduction
-This template includes a simple feature to display a random rubber duck from example READ ONLY database. 
-This feature demonstrates the integration of the frontend with the backend and can be used to test if your setup is working correctly.
+The application is a full-stack app with a Node.js server, Express API, and a React client. Users can track their sleep time, wake-up time, and date, get personalized sleep tips using the Gemini API, as well as add and view inspiring content and get inspiration quotes using an API.
 
-1. Client:
-   - The home page contains a button labeled `Show Random Duck`.
-   - When clicked, this button sends a request to the backend to fetch a random rubber duck.
-   - The details of the random rubber duck, including its name and image, are displayed on the page.
-2. Backend:
-   - The server has an endpoint `/api/rubberDucks/random` that selects a random rubber duck from the database and returns its details in the response.
-   - The server contains more endpoints, but without corresponding implementation in the client. These endpoints are to set example of more types of requests.
+## Features
 
+### 1. Sleep Tracking
+
+   - Record sleep time, wake-up time, and date with auto-filled today's date.
+
+   - Uses 24-hour clock format for inputs.
+   
+   - Get personalized sleep tips by AI.
+
+### 2. Inspiration Board
+
+   - Add, view, and manage inspirational influencers.
+
+### 3. Responsive Design
+
+   - Mobile-friendly layout with intuitive UI.
+   
 ## Installation
 
 ### Prerequisites
@@ -27,7 +34,7 @@ This feature demonstrates the integration of the frontend with the backend and c
 
 ### Clone the Repository
 To get started with this project, you need to clone the repository to your local machine. Follow these steps:
-1. Create a project from this repository by clicking on `Use this template` -> `Create a new repository` (more info [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)) - only ONCE per project
+1. Create a project from this repository by clicking on `Use this template` -> `Create a new repository` (more info [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template))
 1. Clone the new Repository: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
 ### Server Setup
